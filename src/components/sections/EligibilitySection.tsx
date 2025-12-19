@@ -71,7 +71,7 @@ export function EligibilitySection() {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-royal-gold hover:bg-royal-gold/90 text-primary-blue px-8 py-3 rounded-lg font-semibold transition-colors">
+            <button onClick={() => (window as any).navigateTo?.('apply')} className="bg-royal-gold hover:bg-royal-gold/90 text-primary-blue px-8 py-3 rounded-lg font-semibold transition-colors">
               Start Your Application
             </button>
           </div>

@@ -197,9 +197,9 @@ export default function ApplyPage() {
         {/* Header */}
         <div className="bg-white border-b border-platinum/30">
           <div className="container mx-auto px-4 py-6">
-            <a href="/" className="text-primary-blue hover:text-royal-gold transition-colors inline-flex items-center gap-2">
+            <button onClick={() => (window as any).navigateTo?.('home')} className="text-primary-blue hover:text-royal-gold transition-colors inline-flex items-center gap-2">
               <span>←</span> <span>Back to Home</span>
-            </a>
+            </button>
           </div>
         </div>
 

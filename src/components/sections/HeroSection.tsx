@@ -1,5 +1,6 @@
 import { Button } from '../ui/button';
 import { ArrowRight, CheckCircle } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 export function HeroSection() {
   return (
@@ -63,16 +64,72 @@ export function HeroSection() {
           {/* Trust Indicators */}
           <div className="mt-12 pt-8 border-t border-white/20">
             <p className="text-white/70 text-sm mb-4">Trusted by industry leaders from</p>
-            <div className="flex flex-wrap justify-center gap-8 text-white/60 text-sm">
-              <span>Technology</span>
-              <span>•</span>
-              <span>Manufacturing</span>
-              <span>•</span>
-              <span>Healthcare</span>
-              <span>•</span>
-              <span>Real Estate</span>
-              <span>•</span>
-              <span>Finance</span>
+            <div className="overflow-hidden">
+              <motion.div
+                className="flex gap-8 text-white/60 text-sm whitespace-nowrap"
+                animate={{
+                  x: [0, -1000]
+                }}
+                transition={{
+                  x: {
+                    repeat: Infinity,
+                    repeatType: "loop",
+                    duration: 20,
+                    ease: "linear"
+                  }
+                }}
+              >
+                {/* First set */}
+                <span>Technology</span>
+                <span>•</span>
+                <span>Manufacturing</span>
+                <span>•</span>
+                <span>Healthcare</span>
+                <span>•</span>
+                <span>Real Estate</span>
+                <span>•</span>
+                <span>Finance</span>
+                <span>•</span>
+                <span>Advisory</span>
+                <span>•</span>
+                <span>Travel</span>
+                <span>•</span>
+                <span>D2C</span>
+                <span>•</span>
+                {/* Duplicate set for seamless loop */}
+                <span>Technology</span>
+                <span>•</span>
+                <span>Manufacturing</span>
+                <span>•</span>
+                <span>Healthcare</span>
+                <span>•</span>
+                <span>Real Estate</span>
+                <span>•</span>
+                <span>Finance</span>
+                <span>•</span>
+                <span>Advisory</span>
+                <span>•</span>
+                <span>Travel</span>
+                <span>•</span>
+                <span>D2C</span>
+                <span>•</span>
+                {/* Third set for extra smoothness */}
+                <span>Technology</span>
+                <span>•</span>
+                <span>Manufacturing</span>
+                <span>•</span>
+                <span>Healthcare</span>
+                <span>•</span>
+                <span>Real Estate</span>
+                <span>•</span>
+                <span>Finance</span>
+                <span>•</span>
+                <span>Advisory</span>
+                <span>•</span>
+                <span>Travel</span>
+                <span>•</span>
+                <span>D2C</span>
+              </motion.div>
             </div>
           </div>
         </div>
