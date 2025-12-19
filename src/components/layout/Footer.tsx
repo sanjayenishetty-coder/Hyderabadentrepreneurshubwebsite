@@ -1,10 +1,9 @@
-import { Mail, Phone, MapPin, Linkedin, Twitter, Instagram } from 'lucide-react';
+import { Mail, Phone, MapPin, Linkedin, Facebook, Instagram } from 'lucide-react';
 
 export function Footer() {
   const quickLinks = [
     { href: '/', label: 'Home' },
     { href: '/members', label: 'HEH Members' },
-    { href: '/about', label: 'Why HEH' },
     { href: '/events', label: 'Events' },
     { href: '/stories', label: 'HEH Stories' },
   ];
@@ -39,11 +38,11 @@ export function Footer() {
             </p>
             
             <div className="flex space-x-4">
-              <a href="#" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-royal-gold transition-colors">
+              <a href="https://www.linkedin.com/in/entrepreneur-hub-hyderabad-a56587356/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-royal-gold transition-colors">
                 <Linkedin className="w-5 h-5" />
               </a>
-              <a href="#" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-royal-gold transition-colors">
-                <Twitter className="w-5 h-5" />
+              <a href="https://www.facebook.com/entrepreneurhubhyderabad/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-royal-gold transition-colors">
+                <Facebook className="w-5 h-5" />
               </a>
               <a href="#" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-royal-gold transition-colors">
                 <Instagram className="w-5 h-5" />

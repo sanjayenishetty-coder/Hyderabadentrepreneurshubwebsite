@@ -11,6 +11,7 @@
   --platinum: #e2e8f0;
   --charcoal: #1e293b;
   --success: #10b981;
+  --soft-blue: #e8f1ff;
   --heh-background: #f8fafc;
   --card-bg: #ffffff;
   
@@ -137,6 +138,7 @@
   --color-platinum: var(--platinum);
   --color-charcoal: var(--charcoal);
   --color-success: var(--success);
+  --color-soft-blue: var(--soft-blue);
   --color-heh-background: var(--heh-background);
   --color-card-bg: var(--card-bg);
 }
@@ -261,6 +263,10 @@
   
   .bg-platinum {
     background-color: var(--platinum);
+  }
+  
+  .bg-soft-blue {
+    background-color: var(--soft-blue);
   }
   
   .bg-heh-background {

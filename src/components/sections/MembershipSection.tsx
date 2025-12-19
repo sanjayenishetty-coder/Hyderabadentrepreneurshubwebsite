@@ -62,6 +62,7 @@ function MembershipCard({ tier, price, originalPrice, features, popular, premium
           ? 'bg-royal-gold hover:bg-royal-gold/90 text-white' 
           : 'bg-primary-blue hover:bg-primary-blue/90 text-white'
         }`}
+        onClick={() => (window as any).navigateTo?.('apply')}
       >
         {popular ? 'Get Started Today' : 'Choose Plan'}
       </Button>
@@ -129,48 +130,13 @@ export function MembershipSection() {
           />
         </div>
 
-        {/* Additional Information */}
-        <div className="mt-16 max-w-4xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-            <div className="p-6">
-              <div className="w-12 h-12 bg-royal-gold/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Check className="w-6 h-6 text-royal-gold" />
-              </div>
-              <h4 className="font-semibold text-primary-blue mb-2">No Hidden Fees</h4>
-              <p className="text-sm text-charcoal/70">
-                Transparent pricing with all benefits included. No surprise charges.
-              </p>
-            </div>
-            
-            <div className="p-6">
-              <div className="w-12 h-12 bg-royal-gold/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Star className="w-6 h-6 text-royal-gold" />
-              </div>
-              <h4 className="font-semibold text-primary-blue mb-2">Satisfaction Guaranteed</h4>
-              <p className="text-sm text-charcoal/70">
-                30-day money-back guarantee if you're not satisfied with your membership.
-              </p>
-            </div>
-            
-            <div className="p-6">
-              <div className="w-12 h-12 bg-royal-gold/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Crown className="w-6 h-6 text-royal-gold" />
-              </div>
-              <h4 className="font-semibold text-primary-blue mb-2">Upgrade Anytime</h4>
-              <p className="text-sm text-charcoal/70">
-                Start with Gold and upgrade to Platinum as your business grows.
-              </p>
-            </div>
-          </div>
-        </div>
-
         {/* Call to Action */}
         <div className="mt-16 text-center">
           <p className="text-charcoal/70 mb-6">
             Have questions about which membership is right for you?
           </p>
           <Button variant="outline" className="border-royal-gold text-royal-gold hover:bg-royal-gold hover:text-white">
-            Schedule a Consultation Call
+            Schedule a Call
           </Button>
         </div>
       </div>

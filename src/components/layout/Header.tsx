@@ -8,7 +8,6 @@ export function Header() {
   const navItems = [
     { href: '/', label: 'Home' },
     { href: '/members', label: 'HEH Members' },
-    { href: '/about', label: 'Why HEH' },
     { href: '/events', label: 'Events' },
     { href: '/stories', label: 'HEH Stories' },
   ];
@@ -99,7 +98,10 @@ export function Header() {
             >
               Member Login
             </Button>
-            <Button className="bg-royal-gold hover:bg-royal-gold/90 text-white">
+            <Button 
+              className="bg-royal-gold hover:bg-royal-gold/90 text-white"
+              onClick={() => (window as any).navigateTo?.('apply')}
+            >
               Apply Now
             </Button>
           </div>

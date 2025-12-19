@@ -14,7 +14,7 @@ export function HeroSection() {
           {/* Premium Badge */}
           <div className="inline-flex items-center space-x-2 bg-royal-gold/20 border border-royal-gold/30 rounded-full px-4 py-2 mb-6">
             <CheckCircle className="w-4 h-4 text-royal-gold" />
-            <span className="text-sm font-medium text-royal-gold">Elite Membership Community</span>
+            <span className="text-sm font-medium text-royal-gold">Connect. Collaborete. Grow</span>
           </div>
 
           {/* Main Headline */}
@@ -35,7 +35,7 @@ export function HeroSection() {
           <div className="flex flex-wrap justify-center gap-6 mb-10 text-sm">
             <div className="flex items-center space-x-2">
               <CheckCircle className="w-5 h-5 text-royal-gold" />
-              <span>₹2+ Cr Revenue Members Only</span>
+              <span>₹2+ Cr Revenue Business Only</span>
             </div>
             <div className="flex items-center space-x-2">
               <CheckCircle className="w-5 h-5 text-royal-gold" />
@@ -52,6 +52,7 @@ export function HeroSection() {
             <Button 
               size="lg" 
               className="bg-royal-gold hover:bg-royal-gold/90 text-white px-8 py-3 text-lg font-semibold group"
+              onClick={() => (window as any).navigateTo?.('apply')}
             >
               Apply for Membership
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />

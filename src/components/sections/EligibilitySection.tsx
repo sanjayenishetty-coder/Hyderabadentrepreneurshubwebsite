@@ -1,83 +1,6 @@
-import { Card } from '../ui/card';
 import { Badge } from '../ui/badge';
-import { Building, Award, MapPin, TrendingUp, Users, Shield, Heart, Handshake } from 'lucide-react';
-
-interface EligibilityCardProps {
-  title: string;
-  icon: React.ReactNode;
-  requirements: Array<{
-    text: string;
-    icon: React.ReactNode;
-  }>;
-}
-
-function EligibilityCard({ title, icon, requirements }: EligibilityCardProps) {
-  return (
-    <Card className="p-8 h-full hover:shadow-lg transition-all duration-300">
-      <div className="flex items-center space-x-3 mb-6">
-        <div className="w-12 h-12 bg-royal-gold/10 rounded-full flex items-center justify-center">
-          <div className="text-royal-gold">
-            {icon}
-          </div>
-        </div>
-        <h3 className="font-playfair text-2xl font-bold text-white">
-          {title}
-        </h3>
-      </div>
-      
-      <div className="space-y-4">
-        {requirements.map((requirement, index) => (
-          <div key={index} className="flex items-start space-x-3">
-            <div className="text-royal-gold flex-shrink-0 mt-1">
-              {requirement.icon}
-            </div>
-            <span className="text-white/90 leading-relaxed">{requirement.text}</span>
-          </div>
-        ))}
-      </div>
-    </Card>
-  );
-}
 
 export function EligibilitySection() {
-  const businessCriteria = [
-    {
-      text: "Established entrepreneur with 3+ years of business experience",
-      icon: <Award className="w-5 h-5" />
-    },
-    {
-      text: "Annual business turnover of ₹2+ crores (verified)",
-      icon: <TrendingUp className="w-5 h-5" />
-    },
-    {
-      text: "Hyderabad-based primary business operations",
-      icon: <MapPin className="w-5 h-5" />
-    },
-    {
-      text: "Demonstrated consistent growth trajectory over past 2 years",
-      icon: <Building className="w-5 h-5" />
-    }
-  ];
-
-  const professionalStandards = [
-    {
-      text: "Commitment to ethical business practices and integrity",
-      icon: <Shield className="w-5 h-5" />
-    },
-    {
-      text: "Active community participation and networking mindset",
-      icon: <Users className="w-5 h-5" />
-    },
-    {
-      text: "Collaborative growth mindset and willingness to share knowledge",
-      icon: <Heart className="w-5 h-5" />
-    },
-    {
-      text: "Professional conduct and mutual respect for fellow members",
-      icon: <Handshake className="w-5 h-5" />
-    }
-  ];
-
   return (
     <section className="py-20 bg-gradient-to-br from-primary-blue via-charcoal to-primary-blue text-white relative overflow-hidden">
       {/* Background Pattern */}
@@ -97,20 +20,6 @@ export function EligibilitySection() {
             We maintain high standards to ensure our community consists of serious, 
             committed entrepreneurs who contribute to collective growth.
           </p>
-        </div>
-
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto mb-16">
-          <EligibilityCard
-            title="Business Criteria"
-            icon={<Building className="w-6 h-6" />}
-            requirements={businessCriteria}
-          />
-          
-          <EligibilityCard
-            title="Professional Standards"
-            icon={<Award className="w-6 h-6" />}
-            requirements={professionalStandards}
-          />
         </div>
 
         {/* Application Process */}
@@ -157,16 +66,13 @@ export function EligibilitySection() {
         {/* Additional Information */}
         <div className="mt-12 text-center">
           <p className="text-white/80 mb-6 max-w-2xl mx-auto">
-            <strong>Note:</strong> Applications are reviewed monthly. Due to our selective admission process, 
+            <strong>Note:</strong> Applications are reviewed weekly. Due to our selective admission process, 
             we accept approximately 60% of qualified applications to maintain community quality.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-royal-gold hover:bg-royal-gold/90 text-primary-blue px-8 py-3 rounded-lg font-semibold transition-colors">
               Start Your Application
-            </button>
-            <button className="border border-white/30 text-white hover:bg-white hover:text-primary-blue px-8 py-3 rounded-lg font-semibold transition-colors">
-              Download Requirements PDF
             </button>
           </div>
         </div>
