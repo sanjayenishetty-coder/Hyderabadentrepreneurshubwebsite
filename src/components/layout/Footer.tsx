@@ -2,10 +2,9 @@ import { Mail, Phone, MapPin, Linkedin, Facebook, Instagram } from 'lucide-react
 
 export function Footer() {
   const quickLinks = [
-    { href: '/', label: 'Home' },
-    { href: '/members', label: 'HEH Members' },
-    { href: '/events', label: 'Events' },
-    { href: '/stories', label: 'HEH Stories' },
+    { href: '/', label: 'Home', onClick: () => (window as any).navigateTo?.('home') },
+    { href: '/members', label: 'HEH Members', onClick: () => (window as any).navigateTo?.('members') },
+    { href: '/events', label: 'Events', onClick: () => (window as any).navigateTo?.('events') },
   ];
 
   const resources = [
@@ -59,6 +58,7 @@ export function Footer() {
                   key={link.href}
                   href={link.href}
                   className="block text-white/80 hover:text-royal-gold transition-colors"
+                  onClick={link.onClick}
                 >
                   {link.label}
                 </a>
@@ -90,9 +90,10 @@ export function Footer() {
                 <MapPin className="w-5 h-5 text-royal-gold flex-shrink-0 mt-1" />
                 <div>
                   <p className="text-white/80 text-sm">
-                    T-Hub, IIIT-H Campus<br />
-                    Gachibowli, Hyderabad<br />
-                    Telangana 500032
+                    Hyderabad Entrepreneurs Hub Pvt Ltd<br />
+                    Plot no 115, Ashok Enclave,<br />
+                    Netaji Nagar, Secunderabad,<br />
+                    Telangana- 5000062
                   </p>
                 </div>
               </div>
@@ -100,14 +101,14 @@ export function Footer() {
               <div className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-royal-gold" />
                 <a href="tel:+91-40-12345678" className="text-white/80 hover:text-royal-gold transition-colors">
-                  +91-40-12345678
+                  +91 6300799266
                 </a>
               </div>
               
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-royal-gold" />
                 <a href="mailto:connect@heh.community" className="text-white/80 hover:text-royal-gold transition-colors">
-                  connect@heh.community
+                  hello@entrepreneurhub.in
                 </a>
               </div>
             </div>

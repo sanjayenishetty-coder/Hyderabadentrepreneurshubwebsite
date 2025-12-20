@@ -28,7 +28,7 @@ export function EligibilitySection() {
             Application Process
           </h3>
           
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="text-center">
               <div className="w-12 h-12 bg-royal-gold rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-primary-blue font-bold">1</span>
@@ -41,21 +41,13 @@ export function EligibilitySection() {
               <div className="w-12 h-12 bg-royal-gold rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-primary-blue font-bold">2</span>
               </div>
-              <h4 className="font-semibold mb-2">Verification</h4>
-              <p className="text-sm text-white/80">Business credentials and revenue verification</p>
-            </div>
-            
-            <div className="text-center">
-              <div className="w-12 h-12 bg-royal-gold rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-primary-blue font-bold">3</span>
-              </div>
               <h4 className="font-semibold mb-2">Interview</h4>
               <p className="text-sm text-white/80">Personal interview with HEH leadership</p>
             </div>
             
             <div className="text-center">
               <div className="w-12 h-12 bg-royal-gold rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-primary-blue font-bold">4</span>
+                <span className="text-primary-blue font-bold">3</span>
               </div>
               <h4 className="font-semibold mb-2">Welcome</h4>
               <p className="text-sm text-white/80">Join our exclusive entrepreneurial community</p>

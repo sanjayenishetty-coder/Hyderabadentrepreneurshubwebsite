@@ -9,7 +9,6 @@ export function Header() {
     { href: '/', label: 'Home' },
     { href: '/members', label: 'HEH Members' },
     { href: '/events', label: 'Events' },
-    { href: '/stories', label: 'HEH Stories' },
   ];
 
   return (
@@ -70,9 +69,7 @@ export function Header() {
                     Hub
                   </span>
                 </div>
-                <p className="text-[10px] md:text-xs text-charcoal/60 -mt-0.5 tracking-wider uppercase">
-                  Connect.Collaborate.Grow
-                </p>
+                
               </div>
             </a>
           </div>
@@ -83,6 +80,16 @@ export function Header() {
               <a
                 key={item.href}
                 href={item.href}
+                onClick={(e) => {
+                  e.preventDefault();
+                  if (item.href === '/') {
+                    (window as any).navigateTo?.('home');
+                  } else if (item.href === '/members') {
+                    (window as any).navigateTo?.('members');
+                  } else if (item.href === '/events') {
+                    (window as any).navigateTo?.('events');
+                  }
+                }}
                 className="text-charcoal hover:text-royal-gold transition-colors duration-200 font-medium"
               >
                 {item.label}
@@ -95,6 +102,7 @@ export function Header() {
             <Button
               variant="outline"
               className="border-royal-gold text-royal-gold hover:bg-royal-gold hover:text-white"
+              onClick={() => (window as any).navigateTo?.('login')}
             >
               Member Login
             </Button>
@@ -127,8 +135,18 @@ export function Header() {
                 <a
                   key={item.href}
                   href={item.href}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setIsMenuOpen(false);
+                    if (item.href === '/') {
+                      (window as any).navigateTo?.('home');
+                    } else if (item.href === '/members') {
+                      (window as any).navigateTo?.('members');
+                    } else if (item.href === '/events') {
+                      (window as any).navigateTo?.('events');
+                    }
+                  }}
                   className="text-charcoal hover:text-royal-gold transition-colors duration-200 font-medium py-2"
-                  onClick={() => setIsMenuOpen(false)}
                 >
                   {item.label}
                 </a>
@@ -137,10 +155,14 @@ export function Header() {
                 <Button
                   variant="outline"
                   className="border-royal-gold text-royal-gold hover:bg-royal-gold hover:text-white"
+                  onClick={() => (window as any).navigateTo?.('login')}
                 >
                   Member Login
                 </Button>
-                <Button className="bg-royal-gold hover:bg-royal-gold/90 text-white">
+                <Button 
+                  className="bg-royal-gold hover:bg-royal-gold/90 text-white"
+                  onClick={() => (window as any).navigateTo?.('apply')}
+                >
                   Apply Now
                 </Button>
               </div>

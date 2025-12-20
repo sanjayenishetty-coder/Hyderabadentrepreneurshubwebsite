@@ -6,13 +6,17 @@ import { StatsSection } from './components/sections/StatsSection';
 import { BenefitsSection } from './components/sections/BenefitsSection';
 import { MembershipSection } from './components/sections/MembershipSection';
 import { EligibilitySection } from './components/sections/EligibilitySection';
+import { FAQSection } from './components/sections/FAQSection';
 import ApplyPage from './pages/ApplyPage';
+import LoginPage from './pages/LoginPage';
+import MembersPage from './pages/MembersPage';
+import EventsPage from './pages/EventsPage';
 
 export default function App() {
-  const [currentPage, setCurrentPage] = useState<'home' | 'apply'>('home');
+  const [currentPage, setCurrentPage] = useState<'home' | 'apply' | 'login' | 'members' | 'events'>('home');
 
   // Simple routing handler
-  const handleNavigation = (page: 'home' | 'apply') => {
+  const handleNavigation = (page: 'home' | 'apply' | 'login' | 'members' | 'events') => {
     setCurrentPage(page);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
@@ -26,6 +30,18 @@ export default function App() {
     return <ApplyPage />;
   }
 
+  if (currentPage === 'login') {
+    return <LoginPage />;
+  }
+
+  if (currentPage === 'members') {
+    return <MembersPage />;
+  }
+
+  if (currentPage === 'events') {
+    return <EventsPage />;
+  }
+
   return (
     <div className="min-h-screen bg-heh-background">
       <Header />
@@ -36,6 +52,7 @@ export default function App() {
         <BenefitsSection />
         <MembershipSection />
         <EligibilitySection />
+        <FAQSection />
       </main>
       
       <Footer />

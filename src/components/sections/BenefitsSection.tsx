@@ -63,7 +63,7 @@ export function BenefitsSection() {
     },
     {
       icon: <DollarSign className="w-8 h-8" />,
-      title: "Capital Access",
+      title: "Capital Connect",
       description: "Direct introductions to investors, funding guidance, and financial strategies from successful entrepreneurs.",
       features: [
         "Investor introduction programs",
@@ -74,10 +74,10 @@ export function BenefitsSection() {
     },
     {
       icon: <Users className="w-8 h-8" />,
-      title: "Talent & Resources",
-      description: "Leverage collective expertise for hiring top talent, finding reliable vendors, and accessing premium business resources.",
+      title: "Member Privileges",
+      description: "Enjoy exclusive benefits, premium offers from partner brands, and access to vetted resources that support your business needs.",
       features: [
-        "Shared talent pool and recruitment networks",
+        "Privilege offers from partner brands",
         "Vetted vendor and service provider recommendations",
         "Bulk purchasing power for business services",
         "Knowledge sharing on best practices and tools"
@@ -96,13 +96,13 @@ export function BenefitsSection() {
     },
     {
       icon: <Globe className="w-8 h-8" />,
-      title: "Market Expansion",
-      description: "Explore new markets, international opportunities, and strategic partnerships for business expansion.",
+      title: "Go-To-Market",
+      description: "Accelerate your product launches and market entry with proven strategies, collaborative partnerships, and insights from experienced entrepreneurs.",
       features: [
-        "International business missions and trade delegations",
-        "Cross-border partnership facilitation",
-        "Market entry strategies and local insights",
-        "Global networking through partner communities"
+        "GTM strategy workshops and product launch support",
+        "Customer acquisition and sales channel development",
+        "Market positioning and competitive analysis guidance",
+        "Cross-promotional opportunities with member businesses"
       ]
     }
   ];
@@ -138,9 +138,7 @@ export function BenefitsSection() {
             <h3 className="font-playfair text-2xl font-bold mb-4">
               Ready to Accelerate Your Business Growth?
             </h3>
-            <p className="text-white/90 mb-6 max-w-2xl mx-auto">
-              Join Hyderabad's most exclusive entrepreneurial community and unlock your business potential.
-            </p>
+            <p className="text-white/90 mb-6 max-w-2xl mx-auto">Join Hyderabad's most exclusive entrepreneurial community and unlock your business potential.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-royal-gold hover:bg-royal-gold/90 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
                 View Membership Plans
