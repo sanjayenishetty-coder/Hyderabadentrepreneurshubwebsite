@@ -36,8 +36,8 @@ const faqs: FAQItem[] = [
   },
   {
     id: 7,
-    question: "I'm an early-stage founder with high growth potential but under ₹2 Cr revenue. Can I still join?",
-    answer: "While our standard eligibility requires ₹2+ crore annual revenue to ensure peer-level networking, we recognize exceptional early-stage ventures with demonstrated traction and scalability. Founders who have raised significant institutional funding (Series A or beyond), secured major enterprise clients, or shown exponential month-over-month growth may qualify for provisional membership. We evaluate these applications on a case-by-case basis, considering factors like founding team credentials, market opportunity, investor backing, and potential to reach revenue threshold within 12 months. Please submit your application with detailed growth metrics, and our leadership team will assess your candidacy. We're committed to supporting Hyderabad's most promising entrepreneurs."
+    question: "I have less than ₹2 Cr revenue. Can I still join?",
+    answer: "Yes, if approved by the HEH board based on your business potential and interaction with the team."
   }
 ];
 

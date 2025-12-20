@@ -140,11 +140,22 @@ export function BenefitsSection() {
             </h3>
             <p className="text-white/90 mb-6 max-w-2xl mx-auto">Join Hyderabad's most exclusive entrepreneurial community and unlock your business potential.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-royal-gold hover:bg-royal-gold/90 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
+              <button 
+                onClick={() => {
+                  const membershipSection = document.getElementById('membership-section');
+                  if (membershipSection) {
+                    membershipSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                  }
+                }}
+                className="bg-royal-gold hover:bg-royal-gold/90 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
+              >
                 View Membership Plans
               </button>
-              <button className="border border-white/30 text-white hover:bg-white hover:text-primary-blue px-8 py-3 rounded-lg font-semibold transition-colors">
-                Schedule a Call
+              <button 
+                onClick={() => (window as any).navigateTo?.('apply')}
+                className="border border-white/30 text-white hover:bg-white hover:text-primary-blue px-8 py-3 rounded-lg font-semibold transition-colors"
+              >
+                Apply Now
               </button>
             </div>
           </div>

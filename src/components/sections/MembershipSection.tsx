@@ -34,7 +34,7 @@ function MembershipCard({ tier, price, originalPrice, features, popular, premium
         </div>
         
         <h3 className="font-playfair text-2xl font-bold text-primary-blue mb-2">
-          {tier} Membership
+          {tier}
         </h3>
         
         <div className="mb-4">
@@ -74,31 +74,30 @@ export function MembershipSection() {
   const goldFeatures = [
     "Access to all core networking events (20 per year)",
     "Monthly expert masterclasses with industry leaders",
-    "Quarterly strategic business consultations",
-    "Priority investor introduction services",
     "Premium member directory with contact access",
     "Business referral system and lead generation",
     "Exclusive WhatsApp groups for instant networking",
     "Discounted rates on additional HEH services",
     "Annual business growth assessment report",
+    "Industry visits and market exposure",
     "Access to member-only resources and templates"
   ];
 
   const platinumFeatures = [
     "All Gold membership benefits included",
+    "Quarterly strategic business consultations",
+    "Priority investor introduction services",
     "Monthly 1-on-1 advisory sessions with experts",
-    "VIP access to exclusive premium events",
-    "International business missions and trade trips",
     "Personal brand development and PR support",
     "Exclusive networking lounges and co-working access",
     "Priority speaker opportunities at HEH events",
     "Direct access to HEH leadership team",
     "Custom business introduction services",
-    "Complimentary guest passes for events (2 per month)"
+    "Industry visits and market exposure"
   ];
 
   return (
-    <section className="py-20 bg-white">
+    <section id="membership-section" className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="font-playfair text-4xl lg:text-5xl font-bold text-primary-blue mb-6">
@@ -112,7 +111,7 @@ export function MembershipSection() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
           <MembershipCard
-            tier="Gold"
+            tier="HEH Lite"
             price="₹20,000"
             originalPrice="₹30,000"
             features={goldFeatures}
@@ -120,7 +119,7 @@ export function MembershipSection() {
           />
           
           <MembershipCard
-            tier="Platinum"
+            tier="HEH Elite"
             price="₹30,000"
             originalPrice="₹45,000"
             features={platinumFeatures}
