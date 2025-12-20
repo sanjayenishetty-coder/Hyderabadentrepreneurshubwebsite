@@ -17,45 +17,7 @@ export function Header() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <a href="/" className="flex items-start space-x-3 group">
-              {/* Custom Icon */}
-              <div className="relative w-12 h-12 flex items-center justify-center">
-                <svg
-                  viewBox="0 0 48 48"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="w-full h-full"
-                >
-                  {/* Outer hexagon border */}
-                  <path
-                    d="M24 2L42 13V35L24 46L6 35V13L24 2Z"
-                    stroke="#C9A961"
-                    strokeWidth="2"
-                    fill="none"
-                    className="group-hover:fill-royal-gold/10 transition-all duration-300"
-                  />
-                  {/* Inner connecting nodes representing network */}
-                  <circle cx="24" cy="24" r="3" fill="#0A2640" />
-                  <circle cx="16" cy="16" r="2" fill="#C9A961" />
-                  <circle cx="32" cy="16" r="2" fill="#C9A961" />
-                  <circle cx="16" cy="32" r="2" fill="#C9A961" />
-                  <circle cx="32" cy="32" r="2" fill="#C9A961" />
-                  {/* Connection lines */}
-                  <line x1="24" y1="24" x2="16" y2="16" stroke="#C9A961" strokeWidth="1.5" opacity="0.6" />
-                  <line x1="24" y1="24" x2="32" y2="16" stroke="#C9A961" strokeWidth="1.5" opacity="0.6" />
-                  <line x1="24" y1="24" x2="16" y2="32" stroke="#C9A961" strokeWidth="1.5" opacity="0.6" />
-                  <line x1="24" y1="24" x2="32" y2="32" stroke="#C9A961" strokeWidth="1.5" opacity="0.6" />
-                  {/* Letter H integrated */}
-                  <path
-                    d="M20 18V30M28 18V30M20 24H28"
-                    stroke="#C9A961"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    className="opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                  />
-                </svg>
-              </div>
-              
+            <a href="/" className="flex items-start group">
               {/* Brand Name */}
               <div className="flex flex-col items-start">
                 <div className="flex items-baseline space-x-1">

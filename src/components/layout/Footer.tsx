@@ -8,11 +8,11 @@ export function Footer() {
   ];
 
   const resources = [
-    { href: '/application', label: 'Apply for Membership' },
-    { href: '/member-benefits', label: 'Membership Benefits' },
-    { href: '/faq', label: 'FAQ' },
-    { href: '/contact', label: 'Contact Us' },
-    { href: '/privacy', label: 'Privacy Policy' },
+    { href: '/application', label: 'Apply for Membership', onClick: () => (window as any).navigateTo?.('apply') },
+    { href: '/member-benefits', label: 'Membership Benefits', onClick: null },
+    { href: '/faq', label: 'FAQ', onClick: null },
+    { href: '/contact', label: 'Contact Us', onClick: null },
+    { href: '/privacy', label: 'Privacy Policy', onClick: () => (window as any).navigateTo?.('privacy') },
   ];
 
   return (
@@ -21,14 +21,19 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Brand Section */}
           <div className="lg:col-span-1">
-            <div className="flex items-center space-x-2 mb-6">
-              <div className="w-10 h-10 bg-gradient-to-br from-royal-gold to-royal-gold/80 rounded-lg flex items-center justify-center">
-                <span className="text-primary-blue font-playfair font-bold text-xl">H</span>
+            <div className="mb-6">
+              <div className="flex items-baseline space-x-1">
+                <span className="font-playfair font-bold text-lg text-white">
+                  Hyderabad
+                </span>
+                <span className="font-playfair font-bold text-lg text-royal-gold">
+                  Entrepreneur
+                </span>
+                <span className="font-playfair font-bold text-lg text-white">
+                  Hub
+                </span>
               </div>
-              <div>
-                <span className="font-playfair font-bold text-xl">HEH</span>
-                <p className="text-xs text-white/60 -mt-1">Elite Network</p>
-              </div>
+              <p className="text-xs text-white/60 mt-2">Elite Network</p>
             </div>
             
             <p className="text-white/80 mb-6 leading-relaxed">
@@ -57,8 +62,13 @@ export function Footer() {
                 <a
                   key={link.href}
                   href={link.href}
-                  className="block text-white/80 hover:text-royal-gold transition-colors"
-                  onClick={link.onClick}
+                  className="block text-white/80 hover:text-royal-gold transition-colors cursor-pointer"
+                  onClick={(e) => {
+                    if (link.onClick) {
+                      e.preventDefault();
+                      link.onClick();
+                    }
+                  }}
                 >
                   {link.label}
                 </a>
@@ -74,7 +84,13 @@ export function Footer() {
                 <a
                   key={link.href}
                   href={link.href}
-                  className="block text-white/80 hover:text-royal-gold transition-colors"
+                  className="block text-white/80 hover:text-royal-gold transition-colors cursor-pointer"
+                  onClick={(e) => {
+                    if (link.onClick) {
+                      e.preventDefault();
+                      link.onClick();
+                    }
+                  }}
                 >
                   {link.label}
                 </a>
@@ -126,7 +142,14 @@ export function Footer() {
               <a href="/terms" className="text-white/60 hover:text-royal-gold transition-colors">
                 Terms of Service
               </a>
-              <a href="/privacy" className="text-white/60 hover:text-royal-gold transition-colors">
+              <a 
+                href="/privacy" 
+                className="text-white/60 hover:text-royal-gold transition-colors cursor-pointer"
+                onClick={(e) => {
+                  e.preventDefault();
+                  (window as any).navigateTo?.('privacy');
+                }}
+              >
                 Privacy Policy
               </a>
               <a href="/cookies" className="text-white/60 hover:text-royal-gold transition-colors">
