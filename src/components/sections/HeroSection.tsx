@@ -36,7 +36,7 @@ export function HeroSection() {
           <div className="flex flex-wrap justify-center gap-6 mb-10 text-sm">
             <div className="flex items-center space-x-2">
               <CheckCircle className="w-5 h-5 text-royal-gold" />
-              <span>₹2+ Cr Revenue Business Only</span>
+              <span>Early Growth Business Only</span>
             </div>
             <div className="flex items-center space-x-2">
               <CheckCircle className="w-5 h-5 text-royal-gold" />
