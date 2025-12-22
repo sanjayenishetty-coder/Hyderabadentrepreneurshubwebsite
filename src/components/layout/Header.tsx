@@ -2,7 +2,6 @@ import image_26ca8513d10ec2cac00e46ca70ce64cc5d4fafb9 from 'figma:asset/26ca8513
 import { useState } from 'react';
 import { Button } from '../ui/button';
 import { Menu, X } from 'lucide-react';
-import logo from 'figma:asset/330a7ba030c7679b0815372eeb1a43ad3ab5bf83.png';
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -11,6 +10,7 @@ export function Header() {
     { href: '/', label: 'Home' },
     { href: '/members', label: 'HEH Members' },
     { href: '/events', label: 'Events' },
+    { href: '/stories', label: 'HEH Stories' },
   ];
 
   return (
@@ -19,7 +19,14 @@ export function Header() {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center">
-            <a href="/" className="flex items-center group">
+            <a 
+              href="/" 
+              className="flex items-center group"
+              onClick={(e) => {
+                e.preventDefault();
+                (window as any).navigateTo?.('home');
+              }}
+            >
               <img src={image_26ca8513d10ec2cac00e46ca70ce64cc5d4fafb9} alt="Hyderabad Entrepreneur Hub" className="h-16 w-auto" />
             </a>
           </div>
@@ -38,6 +45,8 @@ export function Header() {
                     (window as any).navigateTo?.('members');
                   } else if (item.href === '/events') {
                     (window as any).navigateTo?.('events');
+                  } else if (item.href === '/stories') {
+                    (window as any).navigateTo?.('stories');
                   }
                 }}
                 className="text-charcoal hover:text-royal-gold transition-colors duration-200 font-medium"
@@ -94,6 +103,8 @@ export function Header() {
                       (window as any).navigateTo?.('members');
                     } else if (item.href === '/events') {
                       (window as any).navigateTo?.('events');
+                    } else if (item.href === '/stories') {
+                      (window as any).navigateTo?.('stories');
                     }
                   }}
                   className="text-charcoal hover:text-royal-gold transition-colors duration-200 font-medium py-2"

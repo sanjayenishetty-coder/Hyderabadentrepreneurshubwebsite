@@ -12,12 +12,13 @@ import LoginPage from './pages/LoginPage';
 import MembersPage from './pages/MembersPage';
 import EventsPage from './pages/EventsPage';
 import PrivacyPolicyPage from './pages/PrivacyPolicyPage';
+import { StoriesPage } from './pages/StoriesPage';
 
 export default function App() {
-  const [currentPage, setCurrentPage] = useState<'home' | 'apply' | 'login' | 'members' | 'events' | 'privacy'>('home');
+  const [currentPage, setCurrentPage] = useState<'home' | 'apply' | 'login' | 'members' | 'events' | 'privacy' | 'stories'>('home');
 
   // Simple routing handler
-  const handleNavigation = (page: 'home' | 'apply' | 'login' | 'members' | 'events' | 'privacy') => {
+  const handleNavigation = (page: 'home' | 'apply' | 'login' | 'members' | 'events' | 'privacy' | 'stories') => {
     setCurrentPage(page);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
@@ -45,6 +46,10 @@ export default function App() {
 
   if (currentPage === 'privacy') {
     return <PrivacyPolicyPage />;
+  }
+
+  if (currentPage === 'stories') {
+    return <StoriesPage />;
   }
 
   return (

@@ -128,16 +128,6 @@ export function MembershipSection() {
             className="border-royal-gold bg-gradient-to-br from-white to-royal-gold/5"
           />
         </div>
-
-        {/* Call to Action */}
-        <div className="mt-16 text-center">
-          <p className="text-charcoal/70 mb-6">
-            Have questions about which membership is right for you?
-          </p>
-          <Button variant="outline" className="border-royal-gold text-royal-gold hover:bg-royal-gold hover:text-white">
-            Schedule a Call
-          </Button>
-        </div>
       </div>
     </section>
   );
