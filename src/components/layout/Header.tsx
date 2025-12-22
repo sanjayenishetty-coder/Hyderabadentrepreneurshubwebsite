@@ -1,6 +1,8 @@
+import image_26ca8513d10ec2cac00e46ca70ce64cc5d4fafb9 from 'figma:asset/26ca8513d10ec2cac00e46ca70ce64cc5d4fafb9.png';
 import { useState } from 'react';
 import { Button } from '../ui/button';
 import { Menu, X } from 'lucide-react';
+import logo from 'figma:asset/330a7ba030c7679b0815372eeb1a43ad3ab5bf83.png';
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -12,27 +14,13 @@ export function Header() {
   ];
 
   return (
-    <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-platinum shadow-sm">
+    <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-platinum shadow-sm py-3">
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center">
-            <a href="/" className="flex items-start group">
-              {/* Brand Name */}
-              <div className="flex flex-col items-start">
-                <div className="flex items-baseline space-x-1">
-                  <span className="font-playfair font-bold text-lg md:text-xl text-primary-blue">
-                    Hyderabad
-                  </span>
-                  <span className="font-playfair font-bold text-lg md:text-xl text-royal-gold">
-                    Entrepreneur
-                  </span>
-                  <span className="font-playfair font-bold text-lg md:text-xl text-primary-blue">
-                    Hub
-                  </span>
-                </div>
-                
-              </div>
+            <a href="/" className="flex items-center group">
+              <img src={image_26ca8513d10ec2cac00e46ca70ce64cc5d4fafb9} alt="Hyderabad Entrepreneur Hub" className="h-16 w-auto" />
             </a>
           </div>
 

@@ -1,4 +1,5 @@
 import { Mail, Phone, MapPin, Linkedin, Facebook, Instagram } from 'lucide-react';
+import logo from 'figma:asset/528a92b2a77aeb4347472158c964c6daac014db5.png';
 
 export function Footer() {
   const quickLinks = [
@@ -22,18 +23,7 @@ export function Footer() {
           {/* Brand Section */}
           <div className="lg:col-span-1">
             <div className="mb-6">
-              <div className="flex items-baseline space-x-1">
-                <span className="font-playfair font-bold text-lg text-white">
-                  Hyderabad
-                </span>
-                <span className="font-playfair font-bold text-lg text-royal-gold">
-                  Entrepreneur
-                </span>
-                <span className="font-playfair font-bold text-lg text-white">
-                  Hub
-                </span>
-              </div>
-              <p className="text-xs text-white/60 mt-2">Elite Network</p>
+              <img src={logo} alt="Hyderabad Entrepreneur Hub" className="h-16 w-auto" />
             </div>
             
             <p className="text-white/80 mb-6 leading-relaxed">
