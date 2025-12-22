@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { Clock, Calendar, ArrowRight, Search } from 'lucide-react';
 import { ImageWithFallback } from '../components/figma/ImageWithFallback';
+import { Header } from '../components/layout/Header';
+import { Footer } from '../components/layout/Footer';
 
 interface Story {
   id: number;
@@ -88,6 +90,9 @@ export function StoriesPage() {
 
   return (
     <div className="min-h-screen bg-white relative">
+      {/* Header */}
+      <Header />
+
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-deep-navy via-deep-navy to-charcoal text-white py-16 border-b border-platinum/20">
         <div className="container mx-auto px-4">
@@ -205,7 +210,7 @@ export function StoriesPage() {
       </section>
 
       {/* Overlay with Lock Symbol */}
-      <div className="absolute inset-0 flex items-center justify-center bg-white/10 backdrop-blur-[2px] pointer-events-none">
+      <div className="fixed inset-0 flex items-center justify-center bg-white/10 backdrop-blur-[2px] pointer-events-none z-40">
         <div className="bg-white rounded-2xl shadow-2xl p-12 text-center max-w-md mx-4">
           <div className="w-20 h-20 bg-royal-gold/10 rounded-full flex items-center justify-center mx-auto mb-6">
             <svg
@@ -244,6 +249,9 @@ export function StoriesPage() {
           </div>
         </div>
       </div>
+
+      {/* Footer */}
+      <Footer />
     </div>
   );
 }
