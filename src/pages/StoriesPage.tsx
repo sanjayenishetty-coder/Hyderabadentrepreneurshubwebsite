@@ -228,12 +228,20 @@ export function StoriesPage() {
           <p className="text-charcoal/70 text-lg mb-6">
             Our exclusive HEH Stories section is coming soon. Join HEH to get early access to inspiring entrepreneur success stories.
           </p>
-          <button
-            onClick={() => (window as any).navigateTo?.('apply')}
-            className="bg-royal-gold hover:bg-royal-gold/90 text-white px-8 py-3 rounded-lg transition-colors pointer-events-auto"
-          >
-            Apply for Membership
-          </button>
+          <div className="flex flex-col gap-3">
+            <button
+              onClick={() => (window as any).navigateTo?.('apply')}
+              className="bg-royal-gold hover:bg-royal-gold/90 text-white px-8 py-3 rounded-lg transition-colors pointer-events-auto"
+            >
+              Apply for Membership
+            </button>
+            <button
+              onClick={() => (window as any).navigateTo?.('home')}
+              className="border-2 border-primary-blue text-primary-blue hover:bg-primary-blue hover:text-white px-8 py-3 rounded-lg transition-colors pointer-events-auto"
+            >
+              Back to Home
+            </button>
+          </div>
         </div>
       </div>
     </div>
