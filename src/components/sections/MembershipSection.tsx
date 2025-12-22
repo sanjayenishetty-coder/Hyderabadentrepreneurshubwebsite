@@ -60,11 +60,11 @@ function MembershipCard({ tier, price, originalPrice, features, popular, premium
       <Button 
         className={`w-full py-3 ${popular 
           ? 'bg-royal-gold hover:bg-royal-gold/90 text-white' 
-          : 'bg-primary-blue hover:bg-primary-blue/90 text-white'
+          : 'bg-primary-blue hover:bg-primary-blue/90 text-white mt-8'
         }`}
         onClick={() => (window as any).navigateTo?.('apply')}
       >
-        {popular ? 'Get Started Today' : 'Choose Plan'}
+        Get Started Today
       </Button>
     </Card>
   );

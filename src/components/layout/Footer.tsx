@@ -123,8 +123,8 @@ export function Footer() {
               
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-royal-gold" />
-                <a href="mailto:connect@heh.community" className="text-white/80 hover:text-royal-gold transition-colors">
-                  hello@entrepreneurhub.in
+                <a href="mailto:heh@entrepreneurhub.in" className="text-white/80 hover:text-royal-gold transition-colors">
+                  heh@entrepreneurhub.in
                 </a>
               </div>
             </div>
@@ -135,26 +135,7 @@ export function Footer() {
         <div className="border-t border-white/20 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-white/60 text-sm">
-              © 2024 Hyderabad Entrepreneurs Hub. All rights reserved.
-            </div>
-            
-            <div className="flex space-x-6 text-sm">
-              <a href="/terms" className="text-white/60 hover:text-royal-gold transition-colors">
-                Terms of Service
-              </a>
-              <a 
-                href="/privacy" 
-                className="text-white/60 hover:text-royal-gold transition-colors cursor-pointer"
-                onClick={(e) => {
-                  e.preventDefault();
-                  (window as any).navigateTo?.('privacy');
-                }}
-              >
-                Privacy Policy
-              </a>
-              <a href="/cookies" className="text-white/60 hover:text-royal-gold transition-colors">
-                Cookie Policy
-              </a>
+              @2026 Hyderabad Entrepreneurs Hub Pvt Ltd. All rights reserved.
             </div>
           </div>
         </div>
