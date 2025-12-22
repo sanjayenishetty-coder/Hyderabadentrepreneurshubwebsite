@@ -27,7 +27,7 @@ export function Header() {
                 (window as any).navigateTo?.('home');
               }}
             >
-              <img src={image_26ca8513d10ec2cac00e46ca70ce64cc5d4fafb9} alt="Hyderabad Entrepreneur Hub" className="h-16 w-auto" />
+              <img src="https://d2z9497xp8xb12.cloudfront.net/prod-images/964038c1766405283671HE_Logo.png" alt="Hyderabad Entrepreneur Hub" className="h-22 w-auto" />
             </a>
           </div>
 

@@ -820,6 +820,10 @@
     height: calc(var(--spacing) * 20);
   }
 
+  .h-22 {
+    height: calc(var(--spacing) * 22);
+  }
+
   .h-32 {
     height: calc(var(--spacing) * 32);
   }
