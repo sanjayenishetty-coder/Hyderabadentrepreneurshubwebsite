@@ -6,6 +6,7 @@ export function Footer() {
     { href: '/', label: 'Home', onClick: () => (window as any).navigateTo?.('home') },
     { href: '/members', label: 'HEH Members', onClick: () => (window as any).navigateTo?.('members') },
     { href: '/events', label: 'Events', onClick: () => (window as any).navigateTo?.('events') },
+    { href: '/stories', label: 'HEH Stories', onClick: () => (window as any).navigateTo?.('stories') },
   ];
 
   const resources = [
