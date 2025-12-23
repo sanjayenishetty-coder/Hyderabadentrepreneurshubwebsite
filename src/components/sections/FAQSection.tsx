@@ -45,8 +45,8 @@ export function FAQSection() {
   const [openItems, setOpenItems] = useState<number[]>([]);
 
   const toggleItem = (id: number) => {
-    setOpenItems(prev => 
-      prev.includes(id) 
+    setOpenItems(prev =>
+      prev.includes(id)
         ? prev.filter(item => item !== id)
         : [...prev, id]
     );
@@ -64,7 +64,7 @@ export function FAQSection() {
             Frequently Asked Questions
           </h2>
           <p className="text-lg text-charcoal/80 max-w-2xl mx-auto leading-relaxed">
-            Everything you need to know about joining Hyderabad's most exclusive entrepreneurial community. 
+            Everything you need to know about joining Hyderabad's most exclusive entrepreneurial community.
             Can't find what you're looking for? <a href="mailto:hello@entrepreneurhub.in" className="text-royal-gold hover:underline">Contact us</a>
           </p>
         </div>
@@ -72,7 +72,7 @@ export function FAQSection() {
         {/* FAQ Accordion */}
         <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
           {faqs.map((faq, index) => (
-            <div 
+            <div
               key={faq.id}
               className={`${index !== faqs.length - 1 ? 'border-b border-platinum/30' : ''}`}
             >
@@ -108,7 +108,7 @@ export function FAQSection() {
                     initial={{ height: 0, opacity: 0 }}
                     animate={{ height: 'auto', opacity: 1 }}
                     exit={{ height: 0, opacity: 0 }}
-                    transition={{ 
+                    transition={{
                       height: { duration: 0.3, ease: 'easeOut' },
                       opacity: { duration: 0.25, ease: 'easeOut' }
                     }}
@@ -140,19 +140,21 @@ export function FAQSection() {
             We're here to help. Get in touch with our team and we'll respond within 24 hours.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a 
+            <a
               href="mailto:hello@entrepreneurhub.in"
               className="inline-flex items-center gap-2 bg-royal-gold hover:bg-royal-gold/90 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
             >
               <Mail className="w-5 h-5" />
               Email Us
             </a>
-            <a 
-              href="tel:+919999999999"
+            <a
+              href="https://wa.me/916300799266"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-white border-2 border-platinum hover:border-royal-gold text-primary-blue hover:text-royal-gold px-6 py-3 rounded-lg font-semibold transition-colors"
             >
-              <Phone className="w-5 h-5" />
-              Call Us
+              <MessageCircle className="w-5 h-5" />
+              WhatsApp Us
             </a>
           </div>
           <p className="mt-6 text-sm text-charcoal/60">
