@@ -148,7 +148,7 @@ export function FAQSection() {
               Email Us
             </a>
             <a 
-              href="https://wa.me/919999999999"
+              href="https://wa.me/916300799266"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-white border-2 border-platinum hover:border-royal-gold text-primary-blue hover:text-royal-gold px-6 py-3 rounded-lg font-semibold transition-colors"

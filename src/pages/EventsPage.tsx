@@ -3,12 +3,12 @@ import { Header } from '../components/layout/Header';
 import { Footer } from '../components/layout/Footer';
 import { Input } from '../components/ui/input';
 import { Button } from '../components/ui/button';
-import { 
-  Calendar, 
-  Clock, 
-  MapPin, 
-  Users, 
-  Share2, 
+import {
+  Calendar,
+  Clock,
+  MapPin,
+  Users,
+  Share2,
   Check,
   Search,
   Filter,
@@ -18,8 +18,6 @@ import {
   Link as LinkIcon,
   MessageCircle
 } from 'lucide-react';
-import eventImage from 'figma:asset/c4af7410d5d5aa227bf99d238b63839d3bfd9f38.png';
-import businessModelCanvasImage from 'figma:asset/70827c9d5be172774cb5c1feccc33b5e54309585.png';
 
 // Event interface
 interface Event {
@@ -53,7 +51,7 @@ const eventsData: Event[] = [
     endTime: "17:30",
     location: "JIC - Jubilee Hills International Club",
     locationType: "in-person",
-    image: businessModelCanvasImage,
+    image: "https://d2z9497xp8xb12.cloudfront.net/prod-images/503549c1766484122561044a36e1-62d0-4cde-82df-6dd7e342e0d1.png",
     category: "Workshop",
     speaker: "Praveen Dorna",
     speakerTitle: "Founder - Founders First Network, Head Founder Programs, T-Hub",
@@ -72,7 +70,7 @@ const eventsData: Event[] = [
     endTime: "11:00",
     location: "Jubilee Hills International Club",
     locationType: "in-person",
-    image: eventImage,
+    image: "",
     category: "Networking",
     speaker: "Sanjay Enishetty",
     speakerTitle: "Chief Mentor & Advisor - HEH",
@@ -99,8 +97,8 @@ export default function EventsPage() {
   // Filter events
   const filteredEvents = eventsData.filter(event => {
     const matchesSearch = event.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         event.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         event.category.toLowerCase().includes(searchQuery.toLowerCase());
+      event.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      event.category.toLowerCase().includes(searchQuery.toLowerCase());
     const matchesCategory = selectedCategory === 'all' || event.category === selectedCategory;
     const matchesPastFilter = showPastEvents || !event.isPast;
     return matchesSearch && matchesCategory && matchesPastFilter;
@@ -118,7 +116,7 @@ export default function EventsPage() {
   const handleShare = (platform: string, event: Event) => {
     const eventUrl = `https://heh.community/events/${event.id}`;
     const text = `Check out "${event.title}" at HEH - ${new Date(event.date).toLocaleDateString('en-IN', { month: 'long', day: 'numeric' })}`;
-    
+
     switch (platform) {
       case 'linkedin':
         window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(eventUrl)}`, '_blank');
@@ -171,7 +169,7 @@ export default function EventsPage() {
   return (
     <div className="min-h-screen bg-heh-background">
       <Header />
-      
+
       <main>
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-primary-blue via-primary-blue to-primary-blue/90 text-white py-16">
@@ -183,7 +181,7 @@ export default function EventsPage() {
               <p className="text-xl text-white/90 mb-8">
                 Exclusive networking events, masterclasses, and workshops designed for elite entrepreneurs
               </p>
-              
+
               {/* Quick Stats */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12">
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
@@ -223,7 +221,7 @@ export default function EventsPage() {
                     className="pl-10"
                   />
                 </div>
-                
+
                 {/* Category Filter */}
                 <div className="flex items-center gap-3 w-full md:w-auto">
                   <Filter className="w-5 h-5 text-charcoal/60" />
@@ -351,7 +349,7 @@ export default function EventsPage() {
                             <div className="flex flex-wrap items-center justify-between gap-3 pt-4 border-t border-platinum">
                               <div className="flex items-center gap-3">
                                 {/* RSVP Button */}
-                                {!event.isPast && (
+                                {/* {!event.isPast && (
                                   <Button
                                     onClick={() => setRsvpModalOpen(event.id)}
                                     className={`${
@@ -372,8 +370,18 @@ export default function EventsPage() {
                                       'RSVP'
                                     )}
                                   </Button>
-                                )}
-                                
+                                )} */}
+
+                                <a
+                                  href="https://wa.me/916300799266"
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                >
+                                  <Button className="bg-royal-gold hover:bg-royal-gold/90 cursor-pointer">
+                                    RSVP
+                                  </Button>
+                                </a>
+
                                 {/* Price */}
                                 <span className="text-sm font-semibold text-primary-blue">
                                   {event.price}
@@ -404,9 +412,9 @@ export default function EventsPage() {
                             >
                               <X className="w-5 h-5" />
                             </button>
-                            
+
                             <h3 className="text-charcoal mb-6">Share Event</h3>
-                            
+
                             <div className="space-y-3">
                               <button
                                 onClick={() => handleShare('linkedin', event)}
@@ -415,7 +423,7 @@ export default function EventsPage() {
                                 <Linkedin className="w-5 h-5 text-blue-600" />
                                 <span>Share on LinkedIn</span>
                               </button>
-                              
+
                               <button
                                 onClick={() => handleShare('whatsapp', event)}
                                 className="w-full flex items-center gap-3 p-4 border border-platinum rounded-lg hover:bg-platinum/20 transition-colors"
@@ -423,7 +431,7 @@ export default function EventsPage() {
                                 <MessageCircle className="w-5 h-5 text-green-500" />
                                 <span>Share on WhatsApp</span>
                               </button>
-                              
+
                               <button
                                 onClick={() => handleShare('email', event)}
                                 className="w-full flex items-center gap-3 p-4 border border-platinum rounded-lg hover:bg-platinum/20 transition-colors"
@@ -431,7 +439,7 @@ export default function EventsPage() {
                                 <Mail className="w-5 h-5 text-charcoal/70" />
                                 <span>Share via Email</span>
                               </button>
-                              
+
                               <button
                                 onClick={() => handleShare('copy', event)}
                                 className="w-full flex items-center gap-3 p-4 border border-platinum rounded-lg hover:bg-platinum/20 transition-colors"
@@ -454,13 +462,13 @@ export default function EventsPage() {
                             >
                               <X className="w-5 h-5" />
                             </button>
-                            
+
                             <h3 className="text-charcoal mb-4">Confirm RSVP</h3>
                             <p className="text-charcoal/70 mb-2">{event.title}</p>
                             <p className="text-sm text-charcoal/60 mb-6">
                               {formatDate(event.date)} at {formatTime(event.time)}
                             </p>
-                            
+
                             <div className="bg-royal-gold/10 border border-royal-gold/30 rounded-lg p-4 mb-6">
                               <p className="text-sm text-charcoal">
                                 <strong>Price:</strong> {event.price}
@@ -514,7 +522,7 @@ export default function EventsPage() {
           </div>
         </section>
       </main>
-      
+
       <Footer />
     </div>
   );
