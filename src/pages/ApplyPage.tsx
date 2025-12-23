@@ -591,12 +591,12 @@ export default function ApplyPage() {
 
                 <p className="text-sm text-center text-charcoal/70 mt-6">
                   Questions? Email us at{' '}
-                  <a href="mailto:hello@entrepreneurhub.in" className="text-royal-gold hover:underline">
+                  <a href="mailto:heh@entrepreneurhub.in" className="text-royal-gold hover:underline">
                     hello@entrepreneurhub.in
                   </a>
                   {' '}or call{' '}
                   <a href="tel:+919999999999" className="text-royal-gold hover:underline">
-                    +91 99999 99999
+                    +91 6300799266
                   </a>
                 </p>
               </div>
