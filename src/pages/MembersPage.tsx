@@ -349,12 +349,14 @@ export default function MembersPage() {
             <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
               Join Hyderabad's most exclusive entrepreneurial community and connect with elite business leaders.
             </p>
+            <a href="https://forms.gle/nCFCD5x5aGdHeBPk6" target="_blank" rel="noopener noreferrer">
             <button
-              onClick={() => (window as any).navigateTo?.('apply')}
+              // onClick={() => (window as any).navigateTo?.('apply')}
               className="bg-royal-gold hover:bg-royal-gold/90 text-white px-8 py-3 rounded-lg transition-colors"
             >
               Apply for Membership
             </button>
+            </a>
           </div>
         </section>
         </div>
@@ -383,12 +385,14 @@ export default function MembersPage() {
             <p className="text-charcoal/70 text-lg mb-6">
               Our exclusive member directory is coming soon. Join HEH to get early access to connect with elite entrepreneurs.
             </p>
+            <a href="https://forms.gle/nCFCD5x5aGdHeBPk6" target="_blank" rel="noopener noreferrer">
             <button
-              onClick={() => (window as any).navigateTo?.('apply')}
+                  // onClick={() => (window as any).navigateTo?.('apply')}
               className="bg-royal-gold hover:bg-royal-gold/90 text-white px-8 py-3 rounded-lg transition-colors pointer-events-auto"
             >
               Apply for Membership
             </button>
+            </a>
           </div>
         </div>
       </main>

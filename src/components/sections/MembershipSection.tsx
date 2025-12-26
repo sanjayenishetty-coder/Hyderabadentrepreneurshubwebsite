@@ -32,17 +32,17 @@ function MembershipCard({ tier, price, originalPrice, features, popular, premium
             <Star className="w-8 h-8 text-royal-gold" />
           )}
         </div>
-        
+
         <h3 className="font-playfair text-2xl font-bold text-primary-blue mb-2">
           {tier}
         </h3>
-        
+
         <div className="mb-4">
           <span className="font-playfair text-4xl font-bold text-primary-blue">
             {price}
           </span>
         </div>
-        
+
         <p className="text-charcoal/70 text-sm">
           Annual membership with exclusive benefits
         </p>
@@ -56,16 +56,17 @@ function MembershipCard({ tier, price, originalPrice, features, popular, premium
           </div>
         ))}
       </div>
-
-      <Button 
-        className={`w-full py-3 ${popular 
-          ? 'bg-royal-gold hover:bg-royal-gold/90 text-white' 
-          : 'bg-primary-blue hover:bg-primary-blue/90 text-white mt-8'
-        }`}
-        onClick={() => (window as any).navigateTo?.('apply')}
-      >
-        Get Started Today
-      </Button>
+      <a href="https://forms.gle/nCFCD5x5aGdHeBPk6" target="_blank" rel="noopener noreferrer">
+        <Button
+          className={`w-full py-3 ${popular
+            ? 'bg-royal-gold hover:bg-royal-gold/90 text-white'
+            : 'bg-primary-blue hover:bg-primary-blue/90 text-white mt-8'
+            }`}
+        // onClick={() => (window as any).navigateTo?.('apply')}
+        >
+          Get Started Today
+        </Button>
+      </a>
     </Card>
   );
 }
@@ -104,7 +105,7 @@ export function MembershipSection() {
             Choose Your Growth Path
           </h2>
           <p className="text-xl text-charcoal/80 max-w-3xl mx-auto leading-relaxed">
-            Select the membership tier that aligns with your business goals and networking needs. 
+            Select the membership tier that aligns with your business goals and networking needs.
             Both plans offer exceptional value and ROI.
           </p>
         </div>
@@ -117,7 +118,7 @@ export function MembershipSection() {
             features={goldFeatures}
             className="border-royal-gold/20"
           />
-          
+
           <MembershipCard
             tier="HEH Elite"
             price="₹30,000"

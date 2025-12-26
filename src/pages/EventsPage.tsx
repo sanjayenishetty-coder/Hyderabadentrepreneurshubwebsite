@@ -513,12 +513,14 @@ export default function EventsPage() {
             <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
               Join HEH to get access to premium networking events, masterclasses, and workshops.
             </p>
-            <Button
-              onClick={() => (window as any).navigateTo?.('apply')}
-              className="bg-royal-gold hover:bg-royal-gold/90 text-white px-8 py-3"
-            >
-              Become a Member
-            </Button>
+            <a href="https://forms.gle/nCFCD5x5aGdHeBPk6" target="_blank" rel="noopener noreferrer">
+              <Button
+                // onClick={() => (window as any).navigateTo?.('apply')}
+                className="bg-royal-gold hover:bg-royal-gold/90 text-white px-8 py-3"
+              >
+                Become a Member
+              </Button>
+            </a>
           </div>
         </section>
       </main>

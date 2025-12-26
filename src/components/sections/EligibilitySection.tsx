@@ -17,7 +17,7 @@ export function EligibilitySection() {
             Membership Eligibility
           </h2>
           <p className="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed">
-            We maintain high standards to ensure our community consists of serious, 
+            We maintain high standards to ensure our community consists of serious,
             committed entrepreneurs who contribute to collective growth.
           </p>
         </div>
@@ -27,7 +27,7 @@ export function EligibilitySection() {
           <h3 className="font-playfair text-2xl font-bold text-center mb-8">
             Application Process
           </h3>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="text-center">
               <div className="w-12 h-12 bg-royal-gold rounded-full flex items-center justify-center mx-auto mb-4">
@@ -36,7 +36,7 @@ export function EligibilitySection() {
               <h4 className="font-semibold mb-2">Apply Online</h4>
               <p className="text-sm text-white/80">Submit your application with business details</p>
             </div>
-            
+
             <div className="text-center">
               <div className="w-12 h-12 bg-royal-gold rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-primary-blue font-bold">2</span>
@@ -44,7 +44,7 @@ export function EligibilitySection() {
               <h4 className="font-semibold mb-2">Interview</h4>
               <p className="text-sm text-white/80">Personal interview with HEH leadership</p>
             </div>
-            
+
             <div className="text-center">
               <div className="w-12 h-12 bg-royal-gold rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-primary-blue font-bold">3</span>
@@ -58,14 +58,16 @@ export function EligibilitySection() {
         {/* Additional Information */}
         <div className="mt-12 text-center">
           <p className="text-white/80 mb-6 max-w-2xl mx-auto">
-            <strong>Note:</strong> Applications are reviewed weekly. Due to our selective admission process, 
+            <strong>Note:</strong> Applications are reviewed weekly. Due to our selective admission process,
             we accept approximately 60% of qualified applications to maintain community quality.
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button onClick={() => (window as any).navigateTo?.('apply')} className="bg-royal-gold hover:bg-royal-gold/90 text-primary-blue px-8 py-3 rounded-lg font-semibold transition-colors">
-              Start Your Application
-            </button>
+            <a href="https://forms.gle/nCFCD5x5aGdHeBPk6" target="_blank" rel="noopener noreferrer">
+              <button className="bg-royal-gold hover:bg-royal-gold/90 text-primary-blue px-8 py-3 rounded-lg font-semibold transition-colors">
+                Start Your Application
+              </button>
+            </a>
           </div>
         </div>
       </div>

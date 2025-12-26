@@ -83,8 +83,8 @@ export function StoriesPage() {
 
   const filteredStories = stories.filter(story => {
     const matchesSearch = story.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         story.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         story.author.toLowerCase().includes(searchQuery.toLowerCase());
+      story.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      story.author.toLowerCase().includes(searchQuery.toLowerCase());
     return matchesSearch;
   });
 
@@ -143,15 +143,15 @@ export function StoriesPage() {
                             <p className="text-xs text-charcoal/60">{story.company}</p>
                           </div>
                         </div>
-                        
+
                         <h2 className="text-2xl md:text-3xl text-charcoal mb-3 group-hover:text-royal-gold transition-colors">
                           {story.title}
                         </h2>
-                        
+
                         <p className="text-charcoal/70 mb-4 leading-relaxed">
                           {story.excerpt}
                         </p>
-                        
+
                         <div className="flex items-center gap-4 text-sm text-charcoal/60">
                           <div className="flex items-center gap-1">
                             <Calendar className="w-4 h-4" />
@@ -163,7 +163,7 @@ export function StoriesPage() {
                           </div>
                         </div>
                       </div>
-                      
+
                       {/* Image */}
                       <div className="md:w-48 md:h-32 w-full h-48 flex-shrink-0">
                         <ImageWithFallback
@@ -199,13 +199,15 @@ export function StoriesPage() {
           <p className="text-xl text-platinum/90 mb-8 max-w-2xl mx-auto">
             Join Hyderabad's most exclusive network of entrepreneurs and start your journey to extraordinary success
           </p>
-          <button
-            onClick={() => (window as any).navigateTo?.('apply')}
-            className="px-8 py-4 bg-royal-gold hover:bg-royal-gold/90 text-white rounded-lg transition-all duration-200 inline-flex items-center gap-2"
-          >
-            Apply for Membership
-            <ArrowRight className="w-5 h-5" />
-          </button>
+          <a href="https://forms.gle/nCFCD5x5aGdHeBPk6" target="_blank" rel="noopener noreferrer">
+            <button
+              // onClick={() => (window as any).navigateTo?.('apply')}
+              className="px-8 py-4 bg-royal-gold hover:bg-royal-gold/90 text-white rounded-lg transition-all duration-200 inline-flex items-center gap-2"
+            >
+              Apply for Membership
+              <ArrowRight className="w-5 h-5" />
+            </button>
+          </a>
         </div>
       </section>
 
@@ -223,8 +225,8 @@ export function StoriesPage() {
               strokeLinejoin="round"
               className="w-10 h-10 text-royal-gold"
             >
-              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
-              <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+              <path d="M7 11V7a5 5 0 0 1 10 0v4" />
             </svg>
           </div>
           <h2 className="font-playfair text-3xl font-bold text-primary-blue mb-4">
@@ -234,12 +236,14 @@ export function StoriesPage() {
             Our exclusive HEH Stories section is coming soon. Join HEH to get early access to inspiring entrepreneur success stories.
           </p>
           <div className="flex flex-col gap-3">
-            <button
-              onClick={() => (window as any).navigateTo?.('apply')}
-              className="bg-royal-gold hover:bg-royal-gold/90 text-white px-8 py-3 rounded-lg transition-colors pointer-events-auto"
-            >
-              Apply for Membership
-            </button>
+            <a href="https://forms.gle/nCFCD5x5aGdHeBPk6" target="_blank" rel="noopener noreferrer">
+              <button
+                // onClick={() => (window as any).navigateTo?.('apply')}
+                className="bg-royal-gold hover:bg-royal-gold/90 text-white px-8 py-3 rounded-lg transition-colors pointer-events-auto"
+              >
+                Apply for Membership
+              </button>
+            </a>
             <button
               onClick={() => (window as any).navigateTo?.('home')}
               className="border-2 border-primary-blue text-primary-blue hover:bg-primary-blue hover:text-white px-8 py-3 rounded-lg transition-colors pointer-events-auto"

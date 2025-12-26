@@ -27,8 +27,8 @@ export function HeroSection() {
 
           {/* Subtitle */}
           <p className="text-lg md:text-xl text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Where business excellence meets strategic networking. Join 100+ elite entrepreneurs 
-            building ₹500+ crores in collective business growth through premium connections and 
+            Where business excellence meets strategic networking. Join 100+ elite entrepreneurs
+            building ₹500+ crores in collective business growth through premium connections and
             world-class mentorship.
           </p>
 
@@ -50,15 +50,16 @@ export function HeroSection() {
 
           {/* Call to Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button 
-              size="lg" 
-              className="bg-royal-gold hover:bg-royal-gold/90 text-white px-8 py-3 text-lg font-semibold group"
-              onClick={() => (window as any).navigateTo?.('apply')}
-            >
-              Apply for Membership
-              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </Button>
-            
+            <a href="https://forms.gle/nCFCD5x5aGdHeBPk6" target="_blank" rel="noopener noreferrer">
+              <Button
+                size="lg"
+                className="bg-royal-gold hover:bg-royal-gold/90 text-white px-8 py-3 text-lg font-semibold group"
+              // onClick={() => (window as any).navigateTo?.('apply')}
+              >
+                Apply for Membership
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Button>
+            </a>
           </div>
 
           {/* Trust Indicators */}

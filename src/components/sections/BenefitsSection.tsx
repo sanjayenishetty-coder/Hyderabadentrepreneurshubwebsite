@@ -16,15 +16,15 @@ function BenefitCard({ icon, title, description, features }: BenefitCardProps) {
           {icon}
         </div>
       </div>
-      
+
       <h3 className="font-playfair text-2xl font-bold text-primary-blue mb-4">
         {title}
       </h3>
-      
+
       <p className="text-charcoal/80 mb-6 leading-relaxed">
         {description}
       </p>
-      
+
       <ul className="space-y-3">
         {features.map((feature, index) => (
           <li key={index} className="flex items-start space-x-3">
@@ -115,7 +115,7 @@ export function BenefitsSection() {
             Why Join HEH Community
           </h2>
           <p className="text-xl text-charcoal/80 max-w-3xl mx-auto leading-relaxed">
-            Unlock unprecedented growth opportunities through our comprehensive ecosystem 
+            Unlock unprecedented growth opportunities through our comprehensive ecosystem
             designed exclusively for successful entrepreneurs.
           </p>
         </div>
@@ -140,7 +140,7 @@ export function BenefitsSection() {
             </h3>
             <p className="text-white/90 mb-6 max-w-2xl mx-auto">Join Hyderabad's most exclusive entrepreneurial community and unlock your business potential.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button 
+              <button
                 onClick={() => {
                   const membershipSection = document.getElementById('membership-section');
                   if (membershipSection) {
@@ -151,12 +151,14 @@ export function BenefitsSection() {
               >
                 View Membership Plans
               </button>
-              <button 
-                onClick={() => (window as any).navigateTo?.('apply')}
-                className="border border-white/30 text-white hover:bg-white hover:text-primary-blue px-8 py-3 rounded-lg font-semibold transition-colors"
-              >
-                Apply Now
-              </button>
+              <a href="https://forms.gle/nCFCD5x5aGdHeBPk6" target="_blank" rel="noopener noreferrer">
+                <button
+                  // onClick={() => (window as any).navigateTo?.('apply')}
+                  className="border border-white/30 text-white hover:bg-white hover:text-primary-blue px-8 py-3 rounded-lg font-semibold transition-colors"
+                >
+                  Apply Now
+                </button>
+              </a>
             </div>
           </div>
         </div>

@@ -71,7 +71,7 @@ export default function LoginPage() {
   return (
     <div className="min-h-screen bg-heh-background flex flex-col">
       <Header />
-      
+
       <main className="flex-1 flex items-center justify-center px-4 py-12">
         <div className="w-full max-w-md">
           {/* Back Button */}
@@ -94,7 +94,7 @@ export default function LoginPage() {
                 Member Login
               </h1>
               <p className="text-charcoal/70">
-                {step === 'phone' 
+                {step === 'phone'
                   ? 'Enter your registered mobile number'
                   : 'Enter the OTP sent to your mobile'}
               </p>
@@ -161,7 +161,7 @@ export default function LoginPage() {
                       Change
                     </button>
                   </p>
-                  
+
                   <div className="flex justify-center space-x-2">
                     {otp.map((digit, index) => (
                       <input
@@ -217,12 +217,14 @@ export default function LoginPage() {
           <div className="mt-6 text-center">
             <p className="text-charcoal/60 text-sm">
               Not a member yet?{' '}
-              <button
-                onClick={() => (window as any).navigateTo?.('apply')}
-                className="text-royal-gold hover:underline font-medium"
-              >
-                Apply for Membership
-              </button>
+              <a href="https://forms.gle/nCFCD5x5aGdHeBPk6" target="_blank" rel="noopener noreferrer">
+                <button
+                  // onClick={() => (window as any).navigateTo?.('apply')}
+                  className="text-royal-gold hover:underline font-medium"
+                >
+                  Apply for Membership
+                </button>
+              </a>
             </p>
           </div>
         </div>

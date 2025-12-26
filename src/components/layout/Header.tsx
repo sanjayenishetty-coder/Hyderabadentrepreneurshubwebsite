@@ -19,8 +19,8 @@ export function Header() {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center">
-            <a 
-              href="/" 
+            <a
+              href="/"
               className="flex items-center group"
               onClick={(e) => {
                 e.preventDefault();
@@ -65,12 +65,17 @@ export function Header() {
             >
               Member Login
             </Button>
-            <Button 
+            {/* <Button 
               className="bg-royal-gold hover:bg-royal-gold/90 text-white"
               onClick={() => (window as any).navigateTo?.('apply')}
             >
               Apply Now
-            </Button>
+            </Button> */}
+            <a href="https://forms.gle/nCFCD5x5aGdHeBPk6" target="_blank" rel="noopener noreferrer">
+              <Button className="bg-royal-gold hover:bg-royal-gold/90 text-white cursor-pointer">
+                Apply Now
+              </Button>
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -120,12 +125,14 @@ export function Header() {
                 >
                   Member Login
                 </Button>
-                <Button 
+                <a href="https://forms.gle/nCFCD5x5aGdHeBPk6" target="_blank" rel="noopener noreferrer">
+                <Button
                   className="bg-royal-gold hover:bg-royal-gold/90 text-white"
-                  onClick={() => (window as any).navigateTo?.('apply')}
+                  // onClick={() => (window as any).navigateTo?.('apply')}
                 >
                   Apply Now
                 </Button>
+                </a>
               </div>
             </nav>
           </div>

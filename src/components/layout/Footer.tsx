@@ -10,7 +10,7 @@ export function Footer() {
   ];
 
   const resources = [
-    { href: '/application', label: 'Apply for Membership', onClick: () => (window as any).navigateTo?.('apply') },
+    { href: 'https://forms.gle/nCFCD5x5aGdHeBPk6', label: 'Apply for Membership', onClick: null },
     { href: '/member-benefits', label: 'Membership Benefits', onClick: null },
     { href: '/faq', label: 'FAQ', onClick: null },
     { href: '/contact', label: 'Contact Us', onClick: null },
@@ -26,12 +26,12 @@ export function Footer() {
             <div className="mb-6">
               <img src={logo} alt="Hyderabad Entrepreneur Hub" className="h-16 w-auto" />
             </div>
-            
+
             <p className="text-white/80 mb-6 leading-relaxed">
-              Hyderabad's most exclusive entrepreneurial community, dedicated to fostering 
+              Hyderabad's most exclusive entrepreneurial community, dedicated to fostering
               business excellence through strategic networking and collaborative growth.
             </p>
-            
+
             <div className="flex space-x-4">
               <a href="https://www.linkedin.com/in/entrepreneur-hub-hyderabad-a56587356/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-royal-gold transition-colors">
                 <Linkedin className="w-5 h-5" />
@@ -104,14 +104,14 @@ export function Footer() {
                   </p>
                 </div>
               </div>
-              
+
               <div className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-royal-gold" />
                 <a href="tel:+91-40-12345678" className="text-white/80 hover:text-royal-gold transition-colors">
                   +91 6300799266
                 </a>
               </div>
-              
+
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-royal-gold" />
                 <a href="mailto:heh@entrepreneurhub.in" className="text-white/80 hover:text-royal-gold transition-colors">
