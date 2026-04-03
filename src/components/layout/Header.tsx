@@ -10,7 +10,6 @@ export function Header() {
     { href: '/', label: 'Home' },
     { href: '/members', label: 'HEH Members' },
     { href: '/events', label: 'Events' },
-    { href: '/stories', label: 'HEH Stories' },
   ];
 
   return (
