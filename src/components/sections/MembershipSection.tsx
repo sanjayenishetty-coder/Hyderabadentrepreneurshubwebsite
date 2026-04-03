@@ -102,18 +102,24 @@ export function MembershipSection() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="font-playfair text-4xl lg:text-5xl font-bold text-primary-blue mb-6">
-            Membership
+            Choose Your Growth Path
           </h2>
           <p className="text-xl text-charcoal/80 max-w-3xl mx-auto leading-relaxed">
-            Join Hyderabad's most exclusive entrepreneurial community with our premium membership plan.
+            Select the membership tier that aligns with your business goals and networking needs.
           </p>
         </div>
 
-        <div className="max-w-lg mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          <MembershipCard
+            tier="HEH Membership"
+            price="₹20,000 + GST"
+            features={goldFeatures}
+            className="border-royal-gold/20"
+          />
+
           <MembershipCard
             tier="HEH Elite"
-            price="₹30,000"
-            originalPrice="₹45,000"
+            price="₹30,000 + GST"
             features={platinumFeatures}
             popular={true}
             premium={true}
