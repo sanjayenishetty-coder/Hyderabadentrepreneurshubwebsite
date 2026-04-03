@@ -99,8 +99,7 @@ export function Footer() {
                 <div>
                   <p className="text-white/80 text-sm">
                     Hyderabad Entrepreneurs Hub Pvt Ltd<br />
-                    Plot no 115, Ashok Enclave,<br />
-                    Netaji Nagar, Secunderabad,<br />
+                    Secunderabad,<br />
                     Telangana - 500062
                   </p>
                 </div>
