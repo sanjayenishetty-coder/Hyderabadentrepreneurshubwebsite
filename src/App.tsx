@@ -7,6 +7,8 @@ import { BenefitsSection } from './components/sections/BenefitsSection';
 import { MembershipSection } from './components/sections/MembershipSection';
 import { EligibilitySection } from './components/sections/EligibilitySection';
 import { FAQSection } from './components/sections/FAQSection';
+import { TestimonialsSection } from './components/sections/TestimonialsSection';
+import { UpcomingEventsSection } from './components/sections/UpcomingEventsSection';
 import ApplyPage from './pages/ApplyPage';
 import LoginPage from './pages/LoginPage';
 import MembersPage from './pages/MembersPage';
@@ -58,8 +60,10 @@ export default function App() {
       
       <main>
         <HeroSection />
-        <StatsSection />
         <BenefitsSection />
+        <TestimonialsSection />
+        <StatsSection />
+        <UpcomingEventsSection />
         <MembershipSection />
         <EligibilitySection />
         <FAQSection />

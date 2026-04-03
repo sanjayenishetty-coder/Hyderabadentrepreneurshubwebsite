@@ -15,7 +15,7 @@ export function HeroSection() {
           {/* Premium Badge */}
           <div className="inline-flex items-center space-x-2 bg-royal-gold/20 border border-royal-gold/30 rounded-full px-4 py-2 mb-6">
             <CheckCircle className="w-4 h-4 text-royal-gold" />
-            <span className="text-sm font-medium text-royal-gold">Connect. Collaborete. Grow</span>
+            <span className="text-sm font-medium text-royal-gold">Connect. Collaborate. Grow</span>
           </div>
 
           {/* Main Headline */}

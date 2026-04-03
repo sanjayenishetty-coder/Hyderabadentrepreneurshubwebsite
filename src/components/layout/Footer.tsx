@@ -100,7 +100,7 @@ export function Footer() {
                     Hyderabad Entrepreneurs Hub Pvt Ltd<br />
                     Plot no 115, Ashok Enclave,<br />
                     Netaji Nagar, Secunderabad,<br />
-                    Telangana- 5000062
+                    Telangana - 500062
                   </p>
                 </div>
               </div>
