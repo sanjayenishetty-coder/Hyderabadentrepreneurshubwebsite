@@ -85,7 +85,6 @@ export function MembershipSection() {
   ];
 
   const platinumFeatures = [
-    "All Gold membership benefits included",
     "Quarterly strategic business consultations",
     "Priority investor introduction services",
     "Monthly 1-on-1 advisory sessions with experts",
