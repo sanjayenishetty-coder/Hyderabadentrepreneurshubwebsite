@@ -1,6 +1,7 @@
 import { Header } from '../components/layout/Header';
 import { Footer } from '../components/layout/Footer';
 import { Linkedin, Mail } from 'lucide-react';
+import sanjayPhoto from '../assets/sanjay_enishetty.png';
 
 interface LeaderProps {
   name: string;
@@ -82,7 +83,7 @@ const leaders: LeaderProps[] = [
     name: "Sanjay Enishetty",
     role: "Chief Mentor & Advisor",
     bio: "",
-    image: "https://d2z9497xp8xb12.cloudfront.net/prod-images/503549c1766484122561044a36e1-62d0-4cde-82df-6dd7e342e0d1.png",
+    image: sanjayPhoto,
     linkedin: "https://www.linkedin.com/in/sanjayenishetty/",
     email: "heh@entrepreneurhub.in"
   },
