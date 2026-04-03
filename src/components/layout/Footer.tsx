@@ -7,12 +7,7 @@ export function Footer() {
     { href: '/members', label: 'HEH Members', onClick: () => (window as any).navigateTo?.('members') },
     { href: '/events', label: 'Events', onClick: () => (window as any).navigateTo?.('events') },
     { href: '/stories', label: 'HEH Stories', onClick: () => (window as any).navigateTo?.('stories') },
-    { href: '#leadership-section', label: 'Core Team', onClick: () => {
-      (window as any).navigateTo?.('home');
-      setTimeout(() => {
-        document.getElementById('leadership-section')?.scrollIntoView({ behavior: 'smooth' });
-      }, 100);
-    }},
+    { href: '/team', label: 'Core Team', onClick: () => (window as any).navigateTo?.('team') },
   ];
 
   const resources = [

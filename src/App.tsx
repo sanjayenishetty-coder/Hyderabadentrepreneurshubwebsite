@@ -9,8 +9,8 @@ import { EligibilitySection } from './components/sections/EligibilitySection';
 import { FAQSection } from './components/sections/FAQSection';
 import { TestimonialsSection } from './components/sections/TestimonialsSection';
 import { UpcomingEventsSection } from './components/sections/UpcomingEventsSection';
-import { LeadershipSection } from './components/sections/LeadershipSection';
 import ApplyPage from './pages/ApplyPage';
+import CoreTeamPage from './pages/CoreTeamPage';
 import LoginPage from './pages/LoginPage';
 import MembersPage from './pages/MembersPage';
 import EventsPage from './pages/EventsPage';
@@ -18,10 +18,10 @@ import PrivacyPolicyPage from './pages/PrivacyPolicyPage';
 import { StoriesPage } from './pages/StoriesPage';
 
 export default function App() {
-  const [currentPage, setCurrentPage] = useState<'home' | 'apply' | 'login' | 'members' | 'events' | 'privacy' | 'stories'>('home');
+  const [currentPage, setCurrentPage] = useState<'home' | 'apply' | 'login' | 'members' | 'events' | 'privacy' | 'stories' | 'team'>('home');
 
   // Simple routing handler
-  const handleNavigation = (page: 'home' | 'apply' | 'login' | 'members' | 'events' | 'privacy' | 'stories') => {
+  const handleNavigation = (page: 'home' | 'apply' | 'login' | 'members' | 'events' | 'privacy' | 'stories' | 'team') => {
     setCurrentPage(page);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
@@ -55,6 +55,10 @@ export default function App() {
     return <StoriesPage />;
   }
 
+  if (currentPage === 'team') {
+    return <CoreTeamPage />;
+  }
+
   return (
     <div className="min-h-screen bg-heh-background">
       <Header />
@@ -63,7 +67,6 @@ export default function App() {
         <HeroSection />
         <BenefitsSection />
         <TestimonialsSection />
-        <LeadershipSection />
         <StatsSection />
         <UpcomingEventsSection />
         <MembershipSection />
