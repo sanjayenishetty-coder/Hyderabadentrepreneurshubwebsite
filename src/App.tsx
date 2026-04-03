@@ -9,6 +9,7 @@ import { EligibilitySection } from './components/sections/EligibilitySection';
 import { FAQSection } from './components/sections/FAQSection';
 import { TestimonialsSection } from './components/sections/TestimonialsSection';
 import { UpcomingEventsSection } from './components/sections/UpcomingEventsSection';
+import { LeadershipSection } from './components/sections/LeadershipSection';
 import ApplyPage from './pages/ApplyPage';
 import LoginPage from './pages/LoginPage';
 import MembersPage from './pages/MembersPage';
@@ -62,6 +63,7 @@ export default function App() {
         <HeroSection />
         <BenefitsSection />
         <TestimonialsSection />
+        <LeadershipSection />
         <StatsSection />
         <UpcomingEventsSection />
         <MembershipSection />
