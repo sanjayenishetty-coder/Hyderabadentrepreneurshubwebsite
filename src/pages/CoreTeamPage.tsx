@@ -87,19 +87,23 @@ const leaders: LeaderProps[] = [
     bio: "",
     image: sanjayPhoto,
     linkedin: "https://www.linkedin.com/in/sanjayenishetty/",
-    email: "heh@entrepreneurhub.in"
+    email: "sanjayenishetty@gmail.com"
   },
   {
     name: "Naresh Kuchi",
     role: "Managing Director",
     bio: "",
     image: nareshPhoto,
+    linkedin: "https://www.linkedin.com/in/naresh-kuchi-5813691a5/",
+    email: "nareshk@entrepreneurhub.in"
   },
   {
     name: "Sai Prakash",
     role: "Director - Operations",
     bio: "",
     image: saiPrakashPhoto,
+    linkedin: "https://www.linkedin.com/in/saiprakashav/",
+    email: "heh@entrepreneurhub.in"
   },
 ];
 
