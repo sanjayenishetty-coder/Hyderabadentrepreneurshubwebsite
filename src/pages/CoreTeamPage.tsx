@@ -2,6 +2,8 @@ import { Header } from '../components/layout/Header';
 import { Footer } from '../components/layout/Footer';
 import { Linkedin, Mail } from 'lucide-react';
 import sanjayPhoto from '../assets/sanjay_enishetty.png';
+import nareshPhoto from '../assets/naresh_kuchi.jpg';
+import saiPrakashPhoto from '../assets/sai_prakash.png';
 
 interface LeaderProps {
   name: string;
@@ -89,15 +91,15 @@ const leaders: LeaderProps[] = [
   },
   {
     name: "Naresh Kuchi",
-    role: "Core Member",
+    role: "Managing Director",
     bio: "",
-    image: "",
+    image: nareshPhoto,
   },
   {
     name: "Sai Prakash",
-    role: "Core Member",
+    role: "Director - Operations",
     bio: "",
-    image: "",
+    image: saiPrakashPhoto,
   },
   {
     name: "Sridhar DadhiRao",
