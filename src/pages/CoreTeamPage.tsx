@@ -20,15 +20,15 @@ function getInitials(name: string) {
 
 function LeaderCard({ name, role, bio, image, linkedin, email }: LeaderProps) {
   return (
-    <div className="group bg-white rounded-2xl p-8 shadow-md hover:shadow-xl transition-all duration-300 border border-platinum/50 text-center">
+    <div className="group bg-white rounded-2xl p-8 shadow-md hover:shadow-xl transition-all duration-300 border border-platinum/50 text-center flex flex-col items-center">
       {/* Photo */}
-      <div className="relative w-36 h-36 mx-auto mb-6">
+      <div className="relative w-40 h-40 mx-auto mb-6">
         <div className="w-full h-full rounded-full overflow-hidden border-4 border-royal-gold/30 group-hover:border-royal-gold transition-colors duration-300">
           {image ? (
             <img
               src={image}
               alt={name}
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover object-top scale-110"
             />
           ) : (
             <div className="w-full h-full bg-gradient-to-br from-primary-blue to-charcoal flex items-center justify-center">
@@ -124,7 +124,7 @@ export default function CoreTeamPage() {
         {/* Team Grid */}
         <section className="py-16">
           <div className="container mx-auto px-4">
-            <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-3 gap-8 max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-3 gap-8 max-w-4xl mx-auto items-stretch">
               {leaders.map((leader, index) => (
                 <LeaderCard key={index} {...leader} />
               ))}
