@@ -4,6 +4,9 @@ import { Linkedin, Mail } from 'lucide-react';
 import sanjayPhoto from '../assets/sanjay_enishetty.png';
 import nareshPhoto from '../assets/naresh_kuchi.jpg';
 import saiPrakashPhoto from '../assets/sai_prakash.png';
+import dvpSridharPhoto from '../assets/dvp_sridhar.jpg';
+import manjushaPhoto from '../assets/manjusha.jpg';
+import jayalakshmiPhoto from '../assets/jayalakshmi.jpeg';
 
 interface LeaderProps {
   name: string;
@@ -12,23 +15,25 @@ interface LeaderProps {
   image: string;
   linkedin?: string;
   email?: string;
+  objectPosition?: string;
 }
 
 function getInitials(name: string) {
   return name.split(' ').map(n => n[0]).join('').toUpperCase().slice(0, 2);
 }
 
-function LeaderCard({ name, role, bio, image, linkedin, email }: LeaderProps) {
+function LeaderCard({ name, role, bio, image, linkedin, email, objectPosition = 'center 15%' }: LeaderProps) {
   return (
     <div className="group bg-white rounded-2xl p-8 shadow-md hover:shadow-xl transition-all duration-300 border border-platinum/50 text-center flex flex-col items-center">
       {/* Photo */}
-      <div className="relative w-40 h-40 mx-auto mb-6">
-        <div className="w-full h-full rounded-full overflow-hidden border-4 border-royal-gold/30 group-hover:border-royal-gold transition-colors duration-300">
+      <div className="flex-shrink-0 w-40 h-40 mx-auto mb-6">
+        <div className="w-40 h-40 rounded-full overflow-hidden border-4 border-royal-gold/30 group-hover:border-royal-gold transition-colors duration-300">
           {image ? (
             <img
               src={image}
               alt={name}
-              className="w-full h-full object-cover object-top scale-110"
+              style={{ objectPosition }}
+              className="w-full h-full object-cover"
             />
           ) : (
             <div className="w-full h-full bg-gradient-to-br from-primary-blue to-charcoal flex items-center justify-center">
@@ -87,7 +92,8 @@ const leaders: LeaderProps[] = [
     bio: "",
     image: sanjayPhoto,
     linkedin: "https://www.linkedin.com/in/sanjayenishetty/",
-    email: "sanjayenishetty@gmail.com"
+    email: "sanjayenishetty@gmail.com",
+    objectPosition: "center 15%"
   },
   {
     name: "Naresh Kuchi",
@@ -95,15 +101,47 @@ const leaders: LeaderProps[] = [
     bio: "",
     image: nareshPhoto,
     linkedin: "https://www.linkedin.com/in/naresh-kuchi-5813691a5/",
-    email: "nareshk@entrepreneurhub.in"
+    email: "nareshk@entrepreneurhub.in",
+    objectPosition: "center 15%"
   },
   {
     name: "Sai Prakash",
-    role: "Director - Operations",
+    role: "Marketing Head",
     bio: "",
     image: saiPrakashPhoto,
     linkedin: "https://www.linkedin.com/in/saiprakashav/",
-    email: "heh@entrepreneurhub.in"
+    email: "heh@entrepreneurhub.in",
+    objectPosition: "center 15%"
+  },
+  {
+    name: "DVP Sridhar",
+    role: "Head - Operations",
+    bio: "",
+    image: dvpSridharPhoto,
+    linkedin: "https://www.linkedin.com/in/sridhar-dadhirao-5b657624",
+    objectPosition: "center 10%"
+  },
+  {
+    name: "Manjusha M",
+    role: "Head - Women's Win",
+    bio: "",
+    image: manjushaPhoto,
+    linkedin: "https://www.linkedin.com/in/manjusha-973545103/",
+    objectPosition: "center 20%"
+  },
+  {
+    name: "Jaya Lakshmi",
+    role: "Head - Membership Growth",
+    bio: "",
+    image: jayalakshmiPhoto,
+    objectPosition: "center 10%"
+  },
+  // Placeholder 2 — replace name, role, image, linkedin, email when ready
+  {
+    name: "Coming Soon",
+    role: "",
+    bio: "",
+    image: "",
   },
 ];
 
@@ -128,7 +166,7 @@ export default function CoreTeamPage() {
         {/* Team Grid */}
         <section className="py-16">
           <div className="container mx-auto px-4">
-            <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-3 gap-8 max-w-4xl mx-auto items-stretch">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto items-stretch">
               {leaders.map((leader, index) => (
                 <LeaderCard key={index} {...leader} />
               ))}

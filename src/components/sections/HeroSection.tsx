@@ -64,7 +64,7 @@ export function HeroSection() {
 
           {/* Trust Indicators */}
           <div className="mt-12 pt-8 border-t border-white/20">
-            <p className="text-white/70 text-sm mb-4">Trusted by industry leaders from</p>
+            <p className="text-white/70 text-sm mb-4">Trusted by entrepreneurs from</p>
             <div className="overflow-hidden">
               <motion.div
                 className="flex gap-8 text-white/60 text-sm whitespace-nowrap"

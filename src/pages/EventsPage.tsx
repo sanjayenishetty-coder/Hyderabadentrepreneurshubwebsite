@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { eventsData, type Event } from '../data/events';
 import { Header } from '../components/layout/Header';
 import { Footer } from '../components/layout/Footer';
 import { Input } from '../components/ui/input';
@@ -19,73 +20,11 @@ import {
   MessageCircle
 } from 'lucide-react';
 
-// Event interface
-interface Event {
-  id: number;
-  title: string;
-  description: string;
-  date: string;
-  time: string;
-  endTime: string;
-  location: string;
-  locationType: 'in-person' | 'virtual' | 'hybrid';
-  image: string;
-  category: string;
-  speaker?: string;
-  speakerTitle?: string;
-  attendees: number;
-  maxAttendees: number;
-  price: string;
-  isPast: boolean;
-  tags: string[];
-}
-
-// Mock events data
-const eventsData: Event[] = [
-  {
-    id: 8,
-    title: "Business Model Canvas Workshop",
-    description: "Join this session to explore how the Business Model Canvas works and learn how each element helps shape a stronger business idea. This hands-on workshop will guide you through the essential building blocks of creating and refining your business model with practical examples and interactive exercises.",
-    date: "2026-01-03",
-    time: "15:30",
-    endTime: "17:30",
-    location: "JIC - Jubilee Hills International Club",
-    locationType: "in-person",
-    image: "https://d2z9497xp8xb12.cloudfront.net/prod-images/503549c1766484122561044a36e1-62d0-4cde-82df-6dd7e342e0d1.png",
-    category: "Workshop",
-    speaker: "Praveen Dorna",
-    speakerTitle: "Founder - Founders First Network, Head Founder Programs, T-Hub",
-    attendees: 28,
-    maxAttendees: 40,
-    price: "Limited Seats Available",
-    isPast: false,
-    tags: ["Business Model", "Workshop", "Strategy"]
-  },
-  {
-    id: 7,
-    title: "Members Breakfast Meet",
-    description: "Join us for a Productive Morning for Meaningful Networking, Business Ideations and Discuss Growth Opportunities with fellow Business Leaders and our Advisor. Key agenda includes: Members Introduction, Business Insights, Business Case Studies, HEH Roadmap, Open Discussion, and Networking.",
-    date: "2025-12-06",
-    time: "09:00",
-    endTime: "11:00",
-    location: "Jubilee Hills International Club",
-    locationType: "in-person",
-    image: "",
-    category: "Networking",
-    speaker: "Sanjay Enishetty",
-    speakerTitle: "Chief Mentor & Advisor - HEH",
-    attendees: 45,
-    maxAttendees: 50,
-    price: "₹500 for Members | ₹600 for Visitors",
-    isPast: true,
-    tags: ["Networking", "Breakfast Meet", "Business Insights"]
-  }
-];
 
 export default function EventsPage() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
-  const [showPastEvents, setShowPastEvents] = useState(false);
+  const [eventFilter, setEventFilter] = useState<'all' | 'upcoming' | 'past'>('all');
   const [rsvpedEvents, setRsvpedEvents] = useState<number[]>([]);
   const [shareModalOpen, setShareModalOpen] = useState<number | null>(null);
   const [rsvpModalOpen, setRsvpModalOpen] = useState<number | null>(null);
@@ -100,7 +39,10 @@ export default function EventsPage() {
       event.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
       event.category.toLowerCase().includes(searchQuery.toLowerCase());
     const matchesCategory = selectedCategory === 'all' || event.category === selectedCategory;
-    const matchesPastFilter = showPastEvents || !event.isPast;
+    const matchesPastFilter =
+      eventFilter === 'all' ||
+      (eventFilter === 'upcoming' && !event.isPast) ||
+      (eventFilter === 'past' && event.isPast);
     return matchesSearch && matchesCategory && matchesPastFilter;
   });
 
@@ -238,16 +180,22 @@ export default function EventsPage() {
                   </select>
                 </div>
 
-                {/* Past Events Toggle */}
-                <label className="flex items-center gap-2 cursor-pointer whitespace-nowrap">
-                  <input
-                    type="checkbox"
-                    checked={showPastEvents}
-                    onChange={(e) => setShowPastEvents(e.target.checked)}
-                    className="w-4 h-4 text-royal-gold focus:ring-royal-gold rounded"
-                  />
-                  <span className="text-sm text-charcoal/70">Show Past Events</span>
-                </label>
+                {/* Event Type Tabs */}
+                <div className="flex items-center gap-1 bg-platinum/30 rounded-lg p-1 whitespace-nowrap">
+                  {(['all', 'upcoming', 'past'] as const).map((tab) => (
+                    <button
+                      key={tab}
+                      onClick={() => setEventFilter(tab)}
+                      className={`px-4 py-1.5 rounded-md text-sm font-medium transition-all capitalize ${
+                        eventFilter === tab
+                          ? 'bg-royal-gold text-white shadow-sm'
+                          : 'text-charcoal/60 hover:text-charcoal'
+                      }`}
+                    >
+                      {tab === 'all' ? 'All Events' : tab === 'upcoming' ? 'Upcoming' : 'Past Events'}
+                    </button>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
@@ -372,15 +320,17 @@ export default function EventsPage() {
                                   </Button>
                                 )} */}
 
-                                <a
-                                  href="https://wa.me/916300799266"
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                >
-                                  <Button className="bg-royal-gold hover:bg-royal-gold/90 cursor-pointer">
-                                    RSVP
-                                  </Button>
-                                </a>
+                                {!event.isPast && (
+                                  <a
+                                    href="https://wa.me/916300799266"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                  >
+                                    <Button className="bg-royal-gold hover:bg-royal-gold/90 cursor-pointer">
+                                      RSVP
+                                    </Button>
+                                  </a>
+                                )}
 
                                 {/* Price */}
                                 <span className="text-sm font-semibold text-primary-blue">
