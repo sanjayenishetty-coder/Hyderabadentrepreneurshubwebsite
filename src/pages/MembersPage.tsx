@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Header } from '../components/layout/Header';
 import { Footer } from '../components/layout/Footer';
+import { LockedOverlay } from '../components/LockedOverlay';
 import { Input } from '../components/ui/input';
 import { Search, Mail, MessageCircle, Building2, Tag, MapPin, Globe, Users } from 'lucide-react';
 
@@ -147,9 +148,18 @@ export default function MembersPage() {
     <div className="min-h-screen bg-heh-background">
       <Header />
       
-      <main className="relative">
-        {/* Blurred Content */}
-        <div className="blur-sm pointer-events-none">
+      <main>
+        <LockedOverlay
+          clip
+          message="Our exclusive member directory is coming soon. Join HEH to get early access to connect with elite entrepreneurs."
+          cta={
+            <a href="https://forms.gle/nCFCD5x5aGdHeBPk6" target="_blank" rel="noopener noreferrer">
+              <button className="bg-royal-gold hover:bg-royal-gold/90 text-white px-8 py-3 rounded-lg transition-colors">
+                Apply for Membership
+              </button>
+            </a>
+          }
+        >
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-primary-blue via-primary-blue to-primary-blue/90 text-white py-16">
           <div className="container mx-auto px-4">
@@ -359,42 +369,7 @@ export default function MembersPage() {
             </a>
           </div>
         </section>
-        </div>
-
-        {/* Overlay with Lock Symbol */}
-        <div className="absolute inset-0 flex items-center justify-center bg-white/10 backdrop-blur-[2px] pointer-events-none">
-          <div className="bg-white rounded-2xl shadow-2xl p-12 text-center max-w-md mx-4">
-            <div className="w-20 h-20 bg-royal-gold/10 rounded-full flex items-center justify-center mx-auto mb-6">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="w-10 h-10 text-royal-gold"
-              >
-                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
-                <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
-              </svg>
-            </div>
-            <h2 className="font-playfair text-3xl font-bold text-primary-blue mb-4">
-              Launching Soon
-            </h2>
-            <p className="text-charcoal/70 text-lg mb-6">
-              Our exclusive member directory is coming soon. Join HEH to get early access to connect with elite entrepreneurs.
-            </p>
-            <a href="https://forms.gle/nCFCD5x5aGdHeBPk6" target="_blank" rel="noopener noreferrer">
-            <button
-                  // onClick={() => (window as any).navigateTo?.('apply')}
-              className="bg-royal-gold hover:bg-royal-gold/90 text-white px-8 py-3 rounded-lg transition-colors pointer-events-auto"
-            >
-              Apply for Membership
-            </button>
-            </a>
-          </div>
-        </div>
+        </LockedOverlay>
       </main>
       
       <Footer />
