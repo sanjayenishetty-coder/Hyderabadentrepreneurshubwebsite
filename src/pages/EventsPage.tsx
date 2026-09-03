@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { eventsData, type Event } from '../data/events';
 import { Header } from '../components/layout/Header';
 import { Footer } from '../components/layout/Footer';
+import { LockedOverlay } from '../components/LockedOverlay';
 import { Input } from '../components/ui/input';
 import { Button } from '../components/ui/button';
 import {
@@ -113,6 +114,17 @@ export default function EventsPage() {
       <Header />
 
       <main>
+        <LockedOverlay
+          clip
+          message="Our events experience is coming soon. Join HEH to get early access to exclusive workshops, masterclasses, and networking events."
+          cta={
+            <a href="https://forms.gle/nCFCD5x5aGdHeBPk6" target="_blank" rel="noopener noreferrer">
+              <button className="bg-royal-gold hover:bg-royal-gold/90 text-white px-8 py-3 rounded-lg transition-colors">
+                Apply for Membership
+              </button>
+            </a>
+          }
+        >
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-primary-blue via-primary-blue to-primary-blue/90 text-white py-16">
           <div className="container mx-auto px-4">
@@ -473,6 +485,7 @@ export default function EventsPage() {
             </a>
           </div>
         </section>
+        </LockedOverlay>
       </main>
 
       <Footer />

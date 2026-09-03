@@ -2,6 +2,7 @@ import { Card } from '../ui/card';
 import { Button } from '../ui/button';
 import { Calendar, Clock, MapPin, ArrowRight } from 'lucide-react';
 import { eventsData } from '../../data/events';
+import { LockedOverlay } from '../LockedOverlay';
 
 function formatDate(dateString: string) {
   return new Date(dateString).toLocaleDateString('en-IN', {
@@ -39,6 +40,7 @@ export function UpcomingEventsSection() {
           </p>
         </div>
 
+        <LockedOverlay message="Our events experience is coming soon. Stay tuned!">
         <div className="max-w-4xl mx-auto space-y-6">
           {upcomingEvents.length === 0 ? (
             <p className="text-center text-charcoal/60">No upcoming events at the moment. Check back soon!</p>
@@ -112,6 +114,7 @@ export function UpcomingEventsSection() {
             <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </Button>
         </div>
+        </LockedOverlay>
       </div>
     </section>
   );
